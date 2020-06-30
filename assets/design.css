@@ -9,24 +9,25 @@
 	color: inherit;
 }
 
-/* typography */
-
+/* basics */
 html {
-	font-size: 1rem;
-	font-family: "Helvetica", Arial, sans-serif;
-	font-weight: bold;
+	font-size: 1.2rem;
 }
 
-/* basics */
+/* typography */
+html {
+	font-weight: bold;
+	font-family: "Helvetica", Arial, sans-serif;
+}
 
 /* colors */
-.color-beige {
+section.color-beige {
 	background-color: #e7dbcb;
 }
-.color-red {
+section.color-red {
 	background-color: #dda29b;
 }
-.color-blue {
+section.color-blue {
 	background-color: #8ad0f2;
 }
 
@@ -40,12 +41,27 @@ img {
 }
 
 /* layout */
+
+/* index page */
+
 header,
-section .text,
-footer {
+section .text {
 	padding: 1rem;
 }
 
-/* index page */
+footer {
+	padding: 1rem;
+	background-color: #e7dbcb;
+}
+
+/* footer */
+footer {
+}
+footer address {
+	color: #fff;
+}
+footer address a.email {
+	color: #000;
+}
 
 /* imprint page */
