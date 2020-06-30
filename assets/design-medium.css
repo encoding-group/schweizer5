@@ -12,6 +12,7 @@ section .text {
 }
 section .image {
 	z-index: 5;
+	position: absolute;
 }
 section .color {
 	z-index: 0;
