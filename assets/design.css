@@ -7,6 +7,43 @@
 	font: inherit;
 	text: inherit;
 	color: inherit;
+	vertical-align: baseline;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+}
+header, main, footer, section, figure {
+	display: block;
+}
+a, img {
+	display: inline-block;
+}
+p a {
+	display: inline;
+}
+html {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	line-height: 1;
+}
+figure, img {
+	max-width: 100%;
+}
+img {
+	-ms-interpolation-mode: bicubic;
 }
 
 /* basics */
@@ -32,9 +69,6 @@ section.color-blue {
 }
 
 /* images */
-figure, img {
-	max-width: 100%;
-}
 img {
 	width: 100%;
 	height: auto;
