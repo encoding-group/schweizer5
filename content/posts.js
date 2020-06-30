@@ -1,4 +1,4 @@
-const data = [
+const posts = [
   {
     text: "Die Off-Location befindet sich in denkmalgeschützten Räumen aus dem Jahr 1886 und sind im Originalzustand.",
     color: "beige",
@@ -31,5 +31,5 @@ const data = [
   }
 ];
 export default {
-  data,
+  posts,
 };

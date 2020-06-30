@@ -1,37 +1,37 @@
-import Data from "../content/index.js"
+import { posts } from "../content/posts.js";
 
-let content = document.querySelector('#content');
+let content = document.querySelector("#content");
 
-const makeText = function(sectionText) {
-    const text = document.createElement("div");
-    text.className = "text text-bottom";
-    text.innerHTML = `<p>${sectionText}</p>`;
+const makeText = function (sectionText) {
+  const text = document.createElement("div");
+  text.className = "text text-bottom";
+  text.innerHTML = `<p>${sectionText}</p>`;
 
-    return text;
-}
+  return text;
+};
 
-const makeColor = function(colorName) {
-    const color = document.createElement("div");
-    color.className = `color color-${colorName}`;
+const makeColor = function (colorName) {
+  const color = document.createElement("div");
+  color.className = `color color-${colorName}`;
 
-    return color;
-}
+  return color;
+};
 
-const makeImage = function(imagePath) {
-    // TODO
-}
-console.log(Data.data);
+const makeImage = function (imagePath) {
+  // TODO
+};
+console.log(posts);
 
-Data.data.forEach(item => {
-    const section = document.createElement("section");
+posts.forEach((post) => {
+  const section = document.createElement("section");
 
-    if ("text" in item) {
-        section.appendChild(makeText(item.text));
-    }
+  if ("text" in post) {
+    section.appendChild(makeText(post.text));
+  }
 
-    if ("color" in item) {
-        section.appendChild(makeColor(item.color));
-    }
+  if ("color" in post) {
+    section.appendChild(makeColor(post.color));
+  }
 
-    content.appendChild(section);
-})
+  content.appendChild(section);
+});
