@@ -1,4 +1,4 @@
-# schweizer5
+# Schweizer5
 Mini website hosted on GitHub Pages.
 [Live view](https://encoding-group.github.io/schweizer5/).
 
