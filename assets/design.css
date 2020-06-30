@@ -9,15 +9,16 @@
 	color: inherit;
 }
 
-/* typography */
-
+/* basics */
 html {
-	font-size: 1rem;
-	font-family: "Helvetica", Arial, sans-serif;
-	font-weight: bold;
+	font-size: 1.2rem;
 }
 
-/* basics */
+/* typography */
+html {
+	font-weight: bold;
+	font-family: "Helvetica", Arial, sans-serif;
+}
 
 /* colors */
 .color-beige {
@@ -40,12 +41,17 @@ img {
 }
 
 /* layout */
+
+/* index page */
+
 header,
 section .text,
 footer {
-	padding: 1rem;
+	margin: 1rem;
 }
 
-/* index page */
+section .image {
+	margin: 3px;
+}
 
 /* imprint page */
