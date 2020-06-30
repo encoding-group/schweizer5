@@ -23,6 +23,7 @@ const makeImage = function ({ path, alt, width, height }) {
 
   const figure = document.createElement("figure");
   const image = document.createElement("img");
+  image.classList.add("img");
   image.setAttribute("src", path);
   image.setAttribute("srcset", generateSrcSetString(path, [width, 1000, 500]));
   image.setAttribute("alt", alt);
@@ -51,23 +52,29 @@ const makeTextWithImage = function (text, imagePath, imageText) {
   return wrapper;
 };
 
-Content.posts.forEach((post) => {
-  const section = document.createElement("section");
-  if ("color" in post) {
-    section.className = `color-${post.color}`;
-  }
+const renderPosts = function () {
+  Content.posts.forEach((post) => {
+    const section = document.createElement("section");
+    if ("color" in post) {
+      section.className = `color-${post.color}`;
+    }
 
-  if ("text" in post) {
-    section.appendChild(makeText(post.text));
-  }
+    if ("text" in post) {
+      section.appendChild(makeText(post.text));
+    }
 
-  if ("image" in post) {
-    section.appendChild(makeImage(post.image));
-  }
+    if ("image" in post) {
+      section.appendChild(makeImage(post.image));
+    }
 
-  if ("color" in post) {
-    section.appendChild(makeColor(post.color));
-  }
+    if ("color" in post) {
+      section.appendChild(makeColor(post.color));
+    }
 
-  content.appendChild(section);
-});
+    content.appendChild(section);
+  });
+}
+
+export default {
+  renderPosts
+}
