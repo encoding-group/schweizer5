@@ -27,7 +27,8 @@ const makeImage = function (imagePath, imageText) {
   image.setAttribute("alt", imageText);
 
   figure.appendChild(image);
-  return figure;
+  wrapper.appendChild(figure);
+  return wrapper;
 };
 
 const makeTextWithImage = function (text, imagePath, imageText) {
@@ -45,18 +46,12 @@ Content.posts.forEach((post) => {
     section.className = `color-${post.color}`;
   }
 
-  if ("text" in post && "image" in post) {
-    section.appendChild(
-      makeTextWithImage(post.text, post.image, post.imageText)
-    );
-  } else {
-    if ("text" in post) {
-      section.appendChild(makeText(post.text));
-    }
+  if ("text" in post) {
+    section.appendChild(makeText(post.text));
+  }
 
-    if ("image" in post) {
-      section.appendChild(makeImage(post.image, post.imageText));
-    }
+  if ("image" in post) {
+    section.appendChild(makeImage(post.image, post.imageText));
   }
 
   if ("color" in post) {
