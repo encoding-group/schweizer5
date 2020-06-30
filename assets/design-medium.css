@@ -1,0 +1,24 @@
+/* hide header */
+header {
+	display: none;
+}
+
+/* zig zag layout of sections */
+section:nth-child(even) {
+	margin-right: 10vw;
+}
+section:nth-child(odd) {
+	margin-left: 10vw;
+}
+
+/* place some text inside of images */
+section {
+	position: relative;
+}
+section .image .text {
+	position: absolute;
+	color: #fff;
+}
+section .image.text-bottom .text {
+	bottom: 0;
+}
