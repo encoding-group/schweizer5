@@ -24,12 +24,29 @@ const makeImage = function (imagePath, imageText) {
   const figure = document.createElement("figure");
   const image = document.createElement("img");
   image.setAttribute("src", imagePath);
+  // console.log(generateSrcSetString(imagePath, [getImageWidthFromName(imagePath), 1000, 500]));
+  image.setAttribute("srcset", generateSrcSetString(imagePath, [getImageWidthFromName(imagePath), 1000, 500]));
   image.setAttribute("alt", imageText);
 
   figure.appendChild(image);
   wrapper.appendChild(figure);
   return wrapper;
 };
+
+const getImageWidthFromName = function (imagePath) {
+  let chunks = imagePath.split("-");
+  return chunks[chunks.length - 1].split(".")[0];
+}
+
+const generateSrcSetString = function (imagePath, sizes) {
+  let srcSetStrings = [];
+  const chunks = imagePath.split("-");
+  chunks.pop();
+  imagePath = chunks.join("-");
+  sizes.forEach(size => srcSetStrings.push(`${imagePath}-${size}.jpg ${size}w`));
+
+  return srcSetStrings.join(",");
+}
 
 const makeTextWithImage = function (text, imagePath, imageText) {
   const wrapper = document.createElement("div");
