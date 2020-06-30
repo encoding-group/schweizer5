@@ -21,13 +21,13 @@ html {
 }
 
 /* colors */
-.color-beige {
+section.color-beige {
 	background-color: #e7dbcb;
 }
-.color-red {
+section.color-red {
 	background-color: #dda29b;
 }
-.color-blue {
+section.color-blue {
 	background-color: #8ad0f2;
 }
 
@@ -45,13 +45,23 @@ img {
 /* index page */
 
 header,
-section .text,
-footer {
-	margin: 1rem;
+section .text {
+	padding: 1rem;
 }
 
-section .image {
-	margin: 3px;
+footer {
+	padding: 1rem;
+	background-color: #e7dbcb;
+}
+
+/* footer */
+footer {
+}
+footer address {
+	color: #fff;
+}
+footer address a.email {
+	color: #000;
 }
 
 /* imprint page */
