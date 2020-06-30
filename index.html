@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="assets/design.css" type="text/css">
 	</head>
 	<body>
+
 		<h1>Schweizer5</h1>
 
 		<main id="content">
@@ -52,6 +53,16 @@
 			</section>
 
 		</main>
+
+		<footer>
+			<h3>{{ contact.headline }}</h3>
+			<address>
+				<h4>{{ contact.name.join('<br />') }}</h4>
+				<p>{{ contact.address.join('<br />') }}</p>
+				<a href="tel:{{ contact.tel }}" class="telephone">{{ contact.tel }}</a>
+				<a href="mailto:{{ contact.email }}" class="email">{{ contact.email }}</a>
+			</address>
+		</footer>
 
 		<script type="text/javascript" src="assets/action.js"></script>
 	</body>
