@@ -41,7 +41,9 @@ const makeTextWithImage = function (text, imagePath, imageText) {
 
 Content.posts.forEach((post) => {
   const section = document.createElement("section");
-  section.className = `color-${post.color}`;
+  if ("color" in post) {
+    section.className = `color-${post.color}`;
+  }
 
   if ("text" in post && "image" in post) {
     section.appendChild(
