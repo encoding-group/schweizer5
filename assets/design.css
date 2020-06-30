@@ -1,3 +1,25 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	font: inherit;
+	text: inherit;
+	color: inherit;
+}
+
+/* typography */
+
+html {
+	font-size: 1rem;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-weight: bold;
+}
+
+/* basics */
+
+/* colors */
 .color-beige {
 	background-color: #e7dbcb;
 }
@@ -7,3 +29,23 @@
 .color-blue {
 	background-color: #8ad0f2;
 }
+
+/* images */
+figure, img {
+	max-width: 100%;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* layout */
+header,
+section .text,
+footer {
+	padding: 1rem;
+}
+
+/* index page */
+
+/* imprint page */
