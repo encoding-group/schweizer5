@@ -15,10 +15,55 @@ section:nth-child(odd) {
 section {
 	position: relative;
 }
-section .image .text {
-	position: absolute;
-	color: #fff;
+
+/* section 1 (7n-6) */
+section:nth-child(7n-6){
+	padding-top: 40vw;
+	margin-bottom: -10vw;
+	padding-bottom: 10vw;
 }
-section .image.text-bottom .text {
+
+/* section 2 (7n-5) */
+section:nth-child(7n-5){
+	margin-right: 30vw;
+	margin-bottom: -10vw;
+}
+
+/* section 3 (7n-4) */
+section:nth-child(7n-4){
+
+}
+section:nth-child(7n-4) .text {
+	color: #fff;
+	position: absolute;
+}
+
+/* section 4 (7n-3) */
+section:nth-child(7n-3){
+	margin-right: 20vw;
+}
+section:nth-child(7n-3) .text {
+	color: #fff;
+	position: absolute;
 	bottom: 0;
+}
+
+/* section 5 (7n-2) */
+section:nth-child(7n-2){
+	margin-left: 20vw;
+}
+
+/* section 6 (7n-1) */
+section:nth-child(7n-1){
+	margin-right: 20vw;
+}
+section:nth-child(7n-1) .text {
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+}
+
+/* section 5 (7n-7) */
+section:nth-child(7n-7){
+	margin-left: 30vw;
 }
