@@ -6,12 +6,12 @@ const posts = [
   {
     image: "content/images/schweizer5-1.jpg",
     imageText: "",
-    color: "red",
   },
   {
     text: "Sie beeindruckt durch holzvertäfelte Räume und Deckenmalereien und Matthäus Keufel, der unter anderem auc die Alte Open und das Palmengarten Gesellschaftshaus mit Bildern ausstattete.",
     image: "content/images/schweizer5-2.jpg",
     imageText: "",
+    color: "red",
   },
   {
     text: "Die Räumlichkeiten eignen sich für Dinners mit bis zu 60 Personen, Salonkonzerten, Lesungen und Vorträgen mit bis zu 80 Personen, sowie Stehempfängen und Veranstaltungen bis zu 99 Personen.",
