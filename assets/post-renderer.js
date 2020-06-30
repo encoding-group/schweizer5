@@ -27,6 +27,8 @@ const makeImage = function ({ path, alt, width, height }) {
   image.setAttribute("src", path);
   image.setAttribute("srcset", generateSrcSetString(path, [width, 1000, 500]));
   image.setAttribute("alt", alt);
+  image.setAttribute("width", width);
+  image.setAttribute("height", height);
 
   figure.appendChild(image);
   wrapper.appendChild(figure);
