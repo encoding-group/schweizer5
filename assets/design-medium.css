@@ -3,6 +3,21 @@ header {
 	display: none;
 }
 
+section {
+	position: relative;
+	background-color: transparent;
+}
+section .text {
+	z-index: 10;
+}
+section .image {
+	z-index: 5;
+}
+section .color {
+	z-index: 0;
+	display: block;
+}
+
 /* zig zag layout of sections */
 section:nth-child(even) {
 	margin-right: 10vw;
@@ -11,10 +26,7 @@ section:nth-child(odd) {
 	margin-left: 10vw;
 }
 
-/* place some text inside of images */
-section {
-	position: relative;
-}
+
 
 /* section 1 (7n-6) */
 section:nth-child(7n-6){
@@ -31,7 +43,8 @@ section:nth-child(7n-5){
 
 /* section 3 (7n-4) */
 section:nth-child(7n-4){
-
+	padding-top: 70vw;
+	margin-top: -80vw;
 }
 section:nth-child(7n-4) .text {
 	color: #fff;

@@ -58,14 +58,21 @@ html {
 }
 
 /* colors */
-section.color-beige {
+section.color-beige,
+section.color-beige .color {
 	background-color: #e7dbcb;
 }
-section.color-red {
+section.color-red,
+section.color-red .color {
 	background-color: #dda29b;
 }
-section.color-blue {
+section.color-blue,
+section.color-blue .color {
 	background-color: #8ad0f2;
+}
+
+section .color {
+	display: none;
 }
 
 /* images */
