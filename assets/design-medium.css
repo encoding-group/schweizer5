@@ -54,16 +54,18 @@ section:nth-child(7n-2){
 }
 
 /* section 6 (7n-1) */
-section:nth-child(7n-1){
-	margin-right: 20vw;
-}
-section:nth-child(7n-1) .text {
-	color: #fff;
-	position: absolute;
-	bottom: 0;
+section:nth-child(7n-1) .image {
+	margin-right: 10vw;
 }
 
 /* section 5 (7n-7) */
 section:nth-child(7n-7){
 	margin-left: 30vw;
+}
+
+/* footer */
+footer {
+	margin-top: -20vw;
+	padding-top: 20vw;
+	margin-right: 10vw;
 }
