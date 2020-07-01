@@ -1,9 +1,7 @@
-import Posts from '../content/posts.js';
-
 const makeText = (sectionText) => {
   const text = document.createElement('div');
   text.className = 'text text-bottom';
-  text.innerHTML = `<p>${sectionText}</p>`;
+  text.innerHTML = sectionText;
 
   return text;
 };
@@ -46,30 +44,32 @@ const generateSrcSetString = (imagePath, sizes) => {
   return srcSetStrings.join(',');
 };
 
-const renderPosts = () => {
+const renderPosts = (posts) => {
   const contentNode = document.querySelector('#content');
 
-  Posts.forEach((post) => {
+  for (let item in posts) {
+    let post = posts[item];
+
     const section = document.createElement('section');
 
-    if ('color' in post) {
-      section.className = `color-${post.color}`;
+    if ('color' in post.attributes) {
+      section.className = `color-${post.attributes.color}`;
     }
 
-    if ('text' in post) {
-      section.appendChild(makeText(post.text));
+    if (post.html !== '') {
+      section.appendChild(makeText(post.html));
     }
 
-    if ('image' in post) {
-      section.appendChild(makeImage(post.image));
+    if ('image' in post.attributes) {
+      section.appendChild(makeImage(post.attributes.image));
     }
 
-    if ('color' in post) {
-      section.appendChild(makeColor(post.color));
+    if ('color' in post.attributes) {
+      section.appendChild(makeColor(post.attributes.color));
     }
 
     contentNode.appendChild(section);
-  });
+  }
 };
 
 export default {

@@ -23,6 +23,10 @@ module.exports = {
           name: '[path][name].[ext]',
         },
       },
+      {
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+      },
     ],
   },
 };

@@ -8,8 +8,15 @@ function requireAll(r) {
 
 requireAll(require.context('../uploads', true, /\.jpg$/));
 
+let context = require.context('../content', true, /\.md$/);
+let files = {};
+
+context.keys().forEach((filename) => {
+  files[filename] = context(filename);
+});
+
 // Render content
-PostRenderer.renderPosts();
+PostRenderer.renderPosts(files);
 
 // Initial resize
 window.onload = ImageParentResizer.resize;
