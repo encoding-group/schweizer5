@@ -1,5 +1,12 @@
-import PostRenderer from "../assets/post-renderer.js";
-import ImageParentResizer from "../assets/image-parent-resizer.js";
+import PostRenderer from './js/post-renderer.js';
+import ImageParentResizer from './js/image-parent-resizer.js';
+import './css/design.css';
+
+function requireAll(r) {
+  r.keys().forEach(r);
+}
+
+requireAll(require.context('../uploads', true, /\.jpg$/));
 
 // Render content
 PostRenderer.renderPosts();
