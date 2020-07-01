@@ -1,4 +1,4 @@
-import Content from "../content/posts.js";
+import Posts from "../content/posts.js";
 
 const makeText = (sectionText) => {
   const text = document.createElement("div");
@@ -46,10 +46,10 @@ const generateSrcSetString = (imagePath, sizes) => {
   return srcSetStrings.join(",");
 };
 
-const renderPosts = function () {
-  let contentNode = document.querySelector("#content");
+const renderPosts = () => {
+  const contentNode = document.querySelector("#content");
 
-  Content.posts.forEach((post) => {
+  Posts.forEach((post) => {
     const section = document.createElement("section");
 
     if ("color" in post) {
