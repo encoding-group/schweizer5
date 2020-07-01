@@ -1,8 +1,6 @@
 import Content from "../content/posts.js";
 
-let content = document.querySelector("#content");
-
-const makeText = function (sectionText) {
+const makeText = (sectionText) => {
   const text = document.createElement("div");
   text.className = "text text-bottom";
   text.innerHTML = `<p>${sectionText}</p>`;
@@ -10,53 +8,50 @@ const makeText = function (sectionText) {
   return text;
 };
 
-const makeColor = function (colorName) {
+const makeColor = () => {
   const color = document.createElement("div");
   color.className = "color";
 
   return color;
 };
 
-const makeImage = function ({ path, alt, width, height }) {
-  const wrapper = document.createElement("div");
-  wrapper.className = "image";
-
-  const figure = document.createElement("figure");
+const makeImage = ({ path, alt, width, height }) => {
   const image = document.createElement("img");
-  image.classList.add("img");
+  image.className = "img";
   image.setAttribute("src", path);
   image.setAttribute("srcset", generateSrcSetString(path, [width, 1000, 500]));
   image.setAttribute("alt", alt);
   image.setAttribute("width", width);
   image.setAttribute("height", height);
 
+  const figure = document.createElement("figure");
   figure.appendChild(image);
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "image";
   wrapper.appendChild(figure);
   return wrapper;
 };
 
-const generateSrcSetString = function (imagePath, sizes) {
-  let srcSetStrings = [];
+const generateSrcSetString = (imagePath, sizes) => {
   const chunks = imagePath.split("-");
   chunks.pop();
   imagePath = chunks.join("-");
-  sizes.forEach(size => srcSetStrings.push(`${imagePath}-${size}.jpg ${size}w`));
+
+  let srcSetStrings = [];
+  sizes.forEach((size) =>
+    srcSetStrings.push(`${imagePath}-${size}.jpg ${size}w`)
+  );
 
   return srcSetStrings.join(",");
-}
-
-const makeTextWithImage = function (text, imagePath, imageText) {
-  const wrapper = document.createElement("div");
-  wrapper.className = "image";
-
-  wrapper.appendChild(makeText(text));
-  wrapper.appendChild(makeImage(imagePath, imageText));
-  return wrapper;
 };
 
 const renderPosts = function () {
+  let contentNode = document.querySelector("#content");
+
   Content.posts.forEach((post) => {
     const section = document.createElement("section");
+
     if ("color" in post) {
       section.className = `color-${post.color}`;
     }
@@ -73,10 +68,10 @@ const renderPosts = function () {
       section.appendChild(makeColor(post.color));
     }
 
-    content.appendChild(section);
+    contentNode.appendChild(section);
   });
-}
+};
 
 export default {
-  renderPosts
-}
+  renderPosts,
+};
