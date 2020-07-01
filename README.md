@@ -8,20 +8,21 @@ All content that is shown on the website can be found in the `content` directory
 **Contact information**
 
 **Index page content**
-1. Navigate to the `content` directory and open `posts.js`
+1. Navigate to the `content` directory and open a markdown file. There is a file for each section on the page.
 2. As you can see, there is a strict pattern that describes the sections, optionally containing a text, a color, an image.
 3. You can edit these as long as you keep the formatting:
+
 ```
-{
-	"text": "Sie beeindruckt durch holzvertäfelte Räume und Deckenmalereien und Matthäus Keufel, der unter anderem auc die Alte Open und das Palmengarten Gesellschaftshaus mit Bildern ausstattete.",
-	"image": {
-		"path": "content/images/schweizer5-2-2288.jpg",
-		"alt": "",
-		"width": 2288,
-		"height": 1522
-	},
-	"color": "red"
-},
+---
+image:
+  path: uploads/imagename.jpg
+  alt: alt text that will be displayed if the image cannot be loaded
+  width: 1024
+  height: 768
+color: red
+---
+
+Sie beeindruckt durch holzvertäfelte Räume und Deckenmalereien und Matthäus Keufel, der unter anderem auc die Alte Open und das Palmengarten Gesellschaftshaus mit Bildern ausstattete.
 ```
 
 **Imprint**
