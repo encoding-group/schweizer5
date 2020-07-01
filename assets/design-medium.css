@@ -5,10 +5,12 @@ header {
 
 section {
 	position: relative;
-	background-color: transparent;
+	box-sizing: content-box;
 }
 section .text {
 	z-index: 10;
+	/* width: 100%; */
+	position: absolute;
 }
 section .image {
 	z-index: 5;
@@ -17,6 +19,26 @@ section .image {
 section .color {
 	z-index: 0;
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+section.color-beige,
+section.color-red,
+section.color-blue {
+	background-color: transparent;
+}
+section.color-beige .color {
+	background-color: #e7dbcb;
+}
+section.color-red .color {
+	background-color: #dda29b;
+}
+section.color-blue .color {
+	background-color: #8ad0f2;
 }
 
 /* zig zag layout of sections */
@@ -31,9 +53,12 @@ section:nth-child(odd) {
 
 /* section 1 (7n-6) */
 section:nth-child(7n-6){
-	padding-top: 40vw;
+	height: 50vw;
 	margin-bottom: -10vw;
 	padding-bottom: 10vw;
+}
+section:nth-child(7n-6) .text {
+	bottom: 10vw;
 }
 
 /* section 2 (7n-5) */
@@ -46,41 +71,87 @@ section:nth-child(7n-5){
 section:nth-child(7n-4){
 	padding-top: 70vw;
 	margin-top: -80vw;
+	padding-bottom: 20vw;
+	margin-bottom: -20vw;
 }
 section:nth-child(7n-4) .text {
 	color: #fff;
 	position: absolute;
 }
+section:nth-child(7n-4) .image {
+	margin-bottom: 20vw;
+}
 
 /* section 4 (7n-3) */
 section:nth-child(7n-3){
-	margin-right: 20vw;
+	margin-right: 10vw;
 }
 section:nth-child(7n-3) .text {
 	color: #fff;
 	position: absolute;
 	bottom: 0;
+	margin-right: 10vw;
+	width: unset;
+}
+section:nth-child(7n-3) .image {
+	margin-right: 10vw;
+}
+section:nth-child(7n-3) .color {
+	margin-top: 10vw;
 }
 
 /* section 5 (7n-2) */
 section:nth-child(7n-2){
-	margin-left: 20vw;
+	margin-top: -10vw;
+	margin-left: 10vw;
+	padding-left: 10vw;
+	padding-top: 10vw;
+}
+section:nth-child(7n-2) .color {
+
 }
 
 /* section 6 (7n-1) */
+section:nth-child(7n-1) {
+	background-color: #dda29b;
+}
+section:nth-child(7n-1) .text {
+	position: static;
+}
 section:nth-child(7n-1) .image {
 	margin-right: 10vw;
 }
+section:nth-child(7n-1) .color {
+	display: none;
+}
 
 /* section 5 (7n-7) */
+section:nth-child(7n-7) {
+	margin-top: -50vw;
+	margin-left: 10vw;
+	padding-bottom: 30vw;
+	margin-bottom: 20vw;
+}
 section:nth-child(7n-7) .image {
+	margin-top: 40vw;
 	margin-left: 20vw;
-	margin-top: -20vw;
+}
+section:nth-child(7n-7) .color {
+
 }
 
 /* footer */
 footer {
-	margin-top: -20vw;
-	padding-top: 20vw;
+	margin-top: -30vw;
+	padding-top: 30vw;
 	margin-right: 10vw;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1.5rem;
+}
+footer .footer-main {
+	flex: 1;
+}
+footer .footer-aside {
+	align-self: flex-end;
 }

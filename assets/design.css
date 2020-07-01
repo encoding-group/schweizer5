@@ -9,9 +9,8 @@
 	color: inherit;
 	vertical-align: baseline;
 }
-*,
-*::before,
-*::after {
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 html {
@@ -58,19 +57,15 @@ html {
 }
 
 /* colors */
-section.color-beige,
-section.color-beige .color {
+section.color-beige {
 	background-color: #e7dbcb;
 }
-section.color-red,
-section.color-red .color {
+section.color-red {
 	background-color: #dda29b;
 }
-section.color-blue,
-section.color-blue .color {
+section.color-blue {
 	background-color: #8ad0f2;
 }
-
 section .color {
 	display: none;
 }
@@ -98,12 +93,28 @@ footer {
 
 /* footer */
 footer {
+
 }
 footer address {
 	color: #fff;
 }
 footer address a.email {
 	color: #000;
+}
+footer .footer-main {
+
+}
+footer .footer-aside {
+	margin-top: 1rem;
+	font-size: 0.7rem;
+}
+footer .footer-aside a {
+	opacity: 0.5;
+	transition: opacity 400ms ease;
+	color: #fff;
+}
+footer .footer-aside a:hover {
+	opacity: 1;
 }
 
 /* imprint page */
