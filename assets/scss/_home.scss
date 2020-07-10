@@ -1,3 +1,8 @@
+header,
+footer {
+    background-color: $beige;
+}
+
 main {
 
     padding: 0;
@@ -9,7 +14,7 @@ main {
     }
 
     .color {
-        height: 2rem;
+        height: 3rem;
         &.beige {
             background-color: $beige;
         }
