@@ -1,0 +1,20 @@
+header {
+    display: flex;
+
+    .logo {
+        flex: 1 0 auto;
+    }
+
+    nav {
+        flex: 1 0 auto;
+        text-align: right;
+
+        a.scroll {
+            &:after {
+                content: '↓';
+            }
+        }
+
+    }
+
+}

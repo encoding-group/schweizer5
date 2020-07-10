@@ -1,4 +1,5 @@
-@import 'components/reset';
+@import 'reset';
+@import 'variables';
 
 /* basics */
 html {
@@ -7,6 +8,32 @@ html {
 
 /* typography */
 html {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: bold;
-	font-family: "Helvetica", Arial, sans-serif;
+}
+
+@import 'content';
+
+header,
+main,
+footer {
+	padding: 1rem;
+}
+
+@import 'header';
+
+body.home {
+	@import 'home';
+}
+
+aside {
+	font-size: 0.5rem;
+	padding: 1em;
+	ul, li, a {
+		display: inline-block;
+	}
+}
+
+.images {
+	display: none;
 }
