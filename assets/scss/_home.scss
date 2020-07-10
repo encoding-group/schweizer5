@@ -38,20 +38,25 @@ main {
 
     .text,
     .table {
+        @include width(9);
+        @include offset(0.5);
+        // position: absolute;
         > div {
-            margin: 1rem 0;
+            padding: step(4) 0;
         }
     }
 
-    .text {
-        @include width(9);
-        @include offset(0.5);
+    .table {
+        font-size: 0.7rem;
     }
 
-    .table {
-        @include width(4);
-        @include offset(0.5);
-        font-size: 0.7rem;
+    .deko {
+        position: relative;
+        figure,
+        .color {
+            position: absolute;
+            z-index: -1;
+        }
     }
 
 }
@@ -61,7 +66,7 @@ main.parallax {
     .text {
         position: relative;
         > div {
-            position: absolute;
+            // position: absolute;
             z-index: 10;
         }
     }
