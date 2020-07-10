@@ -1,3 +1,10 @@
 $beige: #dad6cb;
 $olive: #938663;
 $petrol: #456d6d;
+
+@mixin width( $i ) {
+    width: #{ 10 * $i }vw !important;
+}
+@mixin offset( $i ) {
+    margin-left: #{ 10 * $i }vw !important;
+}

@@ -1,6 +1,27 @@
 header,
 footer {
-    background-color: $beige;
+    position: relative;
+    .color {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.color {
+    height: 3rem;
+    &.beige {
+        background-color: $beige;
+    }
+    &.olive {
+        background-color: $olive;
+    }
+    &.petrol {
+        background-color: $petrol;
+    }
 }
 
 main {
@@ -8,22 +29,15 @@ main {
     padding: 0;
 
     .text {
+        @include width(8);
+        @include offset(1);
         > div {
             margin: 1rem;
         }
     }
 
-    .color {
-        height: 3rem;
-        &.beige {
-            background-color: $beige;
-        }
-        &.olive {
-            background-color: $olive;
-        }
-        &.petrol {
-            background-color: $petrol;
-        }
+    .table {
+        font-size: 0.7rem;
     }
 
 }
@@ -38,4 +52,15 @@ main.parallax {
         }
     }
 
+}
+
+@for $i from 1 through 10 {
+    .width-#{$i} {
+        @include width( $i );
+    }
+}
+@for $i from 1 through 10 {
+    .offset-#{$i} {
+        @include offset( $i );
+    }
 }

@@ -1,5 +1,7 @@
 header {
-    display: flex;
+    .top {
+        display: flex;
+    }
 
     .logo {
         flex: 1 0 auto;

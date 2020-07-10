@@ -10,14 +10,3 @@ main {
     }
 
 }
-
-@for $i from 1 through 10 {
-    .width-#{$i} {
-        width: #{ (100 / 8) * $i }vw;
-    }
-}
-@for $i from 1 through 10 {
-    .offset-#{$i} {
-        margin-left: #{ (100 / 8) * $i }vw;
-    }
-}

@@ -3,7 +3,7 @@
 
 /* basics */
 html {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 }
 
 /* typography */
@@ -15,8 +15,7 @@ html {
 @import 'content';
 
 header,
-main,
-footer {
+main {
 	padding: 1rem;
 }
 
@@ -26,14 +25,21 @@ body.home {
 	@import 'home';
 }
 
-aside {
-	font-size: 0.5rem;
-	padding: 1em;
-	ul, li, a {
-		display: inline-block;
+footer {
+	.contact {
+		padding: 1rem;
+		padding-left: 0;
+		@include offset(1);
 	}
-	li {
-		margin-left: 0.3em;
+	aside {
+		font-size: 0.4rem;
+		padding: 1em;
+		ul, li, a {
+			display: inline-block;
+		}
+		li {
+			margin-left: 0.3em;
+		}
 	}
 }
 
