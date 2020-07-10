@@ -1,5 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const postLoader = require('./src/js/post-loader')();
+const MarkdownIt = require('markdown-it')()
+  .use(require('markdown-it-front-matter'), (fm) => {
+    console.log(fm);
+  });
+
+MarkdownIt.render(postLoader[1]);
 
 module.exports = {
   entry: './src/index.js',
@@ -9,9 +16,13 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.html$/i,
+      //   use: 'html-loader'
+      // },
       {
-        test: /\.html$/i,
-        use: 'html-loader'
+        test:/\.hbs$/i,
+        loader: 'handlebars-loader'
       },
       {
         test: /\.s[ac]ss$/,
@@ -33,7 +44,10 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     hash: true,
     title: 'Test title',
-    template: './src/index.html',
-    filename: './index.html'
+    template: './src/index.hbs',
+    filename: './index.html',
+    templateParameters: {
+      foo: 'bar'
+    }
   })]
 };

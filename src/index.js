@@ -1,6 +1,5 @@
 import PostRenderer from './js/post-renderer.js';
 import ImageParentResizer from './js/image-parent-resizer.js';
-import './index.html';
 import './styles/design.scss';
 
 function requireAll(r) {
