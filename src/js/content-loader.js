@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const md = require('markdown-it')();
 
 const loadContentSync = () => {
   let dir = path.resolve(__dirname, '../../content');
@@ -7,7 +8,9 @@ const loadContentSync = () => {
 
   fs.readdirSync(dir).forEach((file) => {
     let fileName = file.split('.')[0].split('-').join('');
-    posts[fileName] = fs.readFileSync(`${dir}/${file}`, { encoding: 'utf8' });
+    posts[fileName] = md.render(
+      fs.readFileSync(`${dir}/${file}`, { encoding: 'utf8' })
+    );
   });
 
   return posts;

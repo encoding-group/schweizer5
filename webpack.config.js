@@ -1,9 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const content = require('./src/js/post-loader')();
-const md = require('markdown-it')();
 
-content.facts = md.render(content.facts);
+const content = require('./src/js/content-loader')();
 
 module.exports = {
   entry: './src/index.js',
