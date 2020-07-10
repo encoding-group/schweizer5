@@ -28,15 +28,21 @@ main {
 
     padding: 0;
 
-    .text {
-        @include width(8);
-        @include offset(1);
+    .text,
+    .table {
         > div {
-            margin: 1rem;
+            margin: 1rem 0;
         }
     }
 
+    .text {
+        @include width(8);
+        @include offset(1);
+    }
+
     .table {
+        @include width(4);
+        @include offset(0.5);
         font-size: 0.7rem;
     }
 
