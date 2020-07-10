@@ -1,20 +1,21 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: {
-    home: './src/home.js',
-    imprint: './src/imprint.js',
-  },
+  entry: './src/index.js',
   output: {
-    filename: '[name].js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  watch: true,
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.html$/i,
+        use: 'html-loader'
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -29,4 +30,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [new HtmlWebpackPlugin({
+    hash: true,
+    title: 'Test title',
+    template: './src/index.html',
+    filename: './index.html'
+  })]
 };
