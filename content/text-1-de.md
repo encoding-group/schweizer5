@@ -1,1 +1,3 @@
 Die historische Off-Location Schweizer 5 befindet sich in einzigartigen, denkmalgeschützten Räumen aus dem Jahr 1886. Als eines der ganz wenigen Gebäude in Frankfurt ist die Schweizer 5 noch weitgehend im Originalzustand. Eingebettet in das Museumsufer Frankfurts, im Herzen der Stadt, öffnet sich der Blick von der Terrasse hin zum verwunschenen Garten und Metzlerpark.
+
+Lorem ipsum...
