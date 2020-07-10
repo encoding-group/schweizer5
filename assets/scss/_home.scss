@@ -1,13 +1,29 @@
 main {
 
+    padding: 0;
+
     .text {
-        padding: 1rem 0;
+        > div {
+            margin: 1rem;
+        }
+    }
+
+    .color {
+        height: 2rem;
+        &.beige {
+            background-color: $beige;
+        }
+        &.olive {
+            background-color: $olive;
+        }
+        &.petrol {
+            background-color: $petrol;
+        }
     }
 
 }
 
 main.parallax {
-    padding: 0;
 
     .text {
         position: relative;
