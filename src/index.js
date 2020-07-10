@@ -1,22 +1,14 @@
-import PostRenderer from './js/post-renderer.js';
-import ImageParentResizer from './js/image-parent-resizer.js';
+import ImageParentResizer from './js/image-parent-resizer';
+import Rellax from 'rellax';
 import './styles/design.scss';
 
-function requireAll(r) {
-  r.keys().forEach(r);
-}
+// Handle image uploads
+const requireAll = (r) => r.keys().forEach(r);
+requireAll(require.context('../uploads', true, /\.(png|svg|jpg|gif)$/));
 
-requireAll(require.context('../uploads', true, /\.jpg$/));
-
-let context = require.context('../content', true, /\.md$/);
-let files = {};
-
-context.keys().forEach((filename) => {
-  files[filename] = context(filename);
-});
-
-// Render content
-PostRenderer.renderPosts(files);
+// Initialize Rellax js for parallaxing
+const rellax = new Rellax('.rellax');
+document.querySelector('main').classList.add('parallax');
 
 // Initial resize
 window.onload = ImageParentResizer.resize;
