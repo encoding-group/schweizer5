@@ -12,6 +12,10 @@ html {
 	font-weight: bold;
 }
 
+::selection {
+	background-color: $petrol;
+}
+
 @import 'content';
 
 main {
