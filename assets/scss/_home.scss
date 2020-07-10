@@ -11,6 +11,14 @@ footer {
     }
 }
 
+header {
+    padding-bottom: step(1);
+}
+
+footer {
+    padding-top: step(2);
+}
+
 .color {
     height: 3rem;
     &.beige {
@@ -36,8 +44,8 @@ main {
     }
 
     .text {
-        @include width(8);
-        @include offset(1);
+        @include width(9);
+        @include offset(0.5);
     }
 
     .table {
@@ -68,5 +76,10 @@ main.parallax {
 @for $i from 1 through 10 {
     .offset-#{$i} {
         @include offset( $i );
+    }
+}
+@for $i from 1 through 30 {
+    .height-#{$i} {
+        @include height( $i );
     }
 }
