@@ -1,0 +1,31 @@
+@import 'reset';
+@import 'variables';
+
+/* basics */
+html {
+	font-size: 1.5rem;
+}
+
+/* typography */
+html {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+@import 'content';
+
+main {
+	padding: 1rem;
+}
+
+@import 'header';
+
+body.home {
+	@import 'home';
+}
+
+@import 'footer';
+
+.images {
+	display: none;
+}

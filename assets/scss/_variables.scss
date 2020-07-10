@@ -1,0 +1,16 @@
+$beige: #dad6cb;
+$olive: #938663;
+$petrol: #456d6d;
+
+@function step( $i ) {
+    @return #{ 10 * $i }vw;
+}
+@mixin width( $i ) {
+    width: #{ 10 * $i }vw !important;
+}
+@mixin offset( $i ) {
+    margin-left: #{ 10 * $i }vw !important;
+}
+@mixin height( $i ) {
+    height: #{ 10 * $i }vw !important;
+}
