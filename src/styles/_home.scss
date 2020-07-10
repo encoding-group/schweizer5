@@ -1,0 +1,86 @@
+header,
+footer {
+  position: relative;
+  .color {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+header {
+  padding-bottom: step(1);
+}
+
+footer {
+  padding-top: step(2);
+}
+
+.color {
+  height: 3rem;
+  &.beige {
+    background-color: $beige;
+  }
+  &.olive {
+    background-color: $olive;
+  }
+  &.petrol {
+    background-color: $petrol;
+  }
+}
+
+main {
+  padding: 0;
+
+  .text,
+  .table {
+    @include width(9);
+    @include offset(0.5);
+    // position: absolute;
+    > div {
+      // padding: step(4) 0;
+    }
+  }
+
+  .table {
+    font-size: 0.7rem;
+  }
+
+  .deko {
+    position: relative;
+    figure,
+    .color {
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+main.parallax {
+  .text {
+    position: relative;
+    > div {
+      // position: absolute;
+      z-index: 10;
+    }
+  }
+}
+
+@for $i from 1 through 10 {
+  .width-#{$i} {
+    @include width($i);
+  }
+}
+@for $i from 1 through 10 {
+  .offset-#{$i} {
+    @include offset($i);
+  }
+}
+@for $i from 1 through 30 {
+  .height-#{$i} {
+    @include height($i);
+  }
+}
