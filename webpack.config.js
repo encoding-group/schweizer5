@@ -1,12 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const postLoader = require('./src/js/post-loader')();
-const MarkdownIt = require('markdown-it')()
-  .use(require('markdown-it-front-matter'), (fm) => {
-    console.log(fm);
-  });
-
-MarkdownIt.render(postLoader[1]);
+const content = require('./src/js/post-loader')();
+const md = require('markdown-it')();
+texts.facts = md.render(texts.facts);
 
 module.exports = {
   entry: './src/index.js',
@@ -47,7 +43,7 @@ module.exports = {
     template: './src/index.hbs',
     filename: './index.html',
     templateParameters: {
-      foo: 'bar'
+      content
     }
   })]
 };
