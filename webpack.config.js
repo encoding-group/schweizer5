@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+const meta = require('./src/js/meta-loader');
 const content = require('./src/js/content-loader')();
 
 module.exports = {
@@ -45,6 +46,7 @@ module.exports = {
       template: './src/index.hbs',
       filename: './index.html',
       templateParameters: {
+        meta,
         content,
       },
     }),

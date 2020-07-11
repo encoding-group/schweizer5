@@ -4,40 +4,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="" />
 
-  <!-- prefetch, preload, preconnect -->
-
-  {{!-- <script src="assets/js/rellax.js"></script> --}}
-
-  <!-- You can edit the following information -->
-  <title>Schweizer 5</title>
-  <meta name="description" content="Schweizer5 Event Location in Frankfurt am Main">
-  <meta name="keywords"
-    content="Event, Location, Salon, Konzerte, Empfänge, Veranstaltungen, Veranstaltungsort, Soiree, Frankfurt, Main, Germany">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}">
+  <meta name="keywords" content="{{#each meta.keywords}}{{this}},{{/each}}">
 
   <!-- open graph -->
-  <meta property="og:title" content="Schweizer 5" />
+  <meta property="og:title" content="{{meta.title}}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
-  <meta property="og:image" content="uploads/schweizer5-eventlocation-frankfurt-1.jpg" />
+  <meta property="og:image" content="{{meta.image}}" />
   <meta property="og:locale" content="de_DE" />
-  <meta property="og:description" content="Schweizer 5 Event Location in Frankfurt am Main" />
+  <meta property="og:description" content="{{meta.description}}" />
 
   <!-- structured data -->
   <script type="application/ld+json">
-    [{
-      "@context": "https://schema.org",
-      "@type": "EventVenue",
-      "maximumAttandeeCapacity": "99",
-      "address",
-
-      "telephone": "+49 173 9658394",
-      "description": "Schweizer 5 Event Location in Frankfurt am Main",
-      "image": "uploads/schweizer5-eventlocation-frankfurt-1.jpg",
-      "name": "Schweizer5",
-      "url": "",
-    }]
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "maximumAttandeeCapacity": "99",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt am Main, Germany",
+      "postalCode": "60594",
+      "streetAddress": "Schweizer Strasse 5"
+    },
+    "telephone": "+49 173 9658394",
+    "description": "Schweizer 5 Event Location in Frankfurt am Main",
+    "image": "content/images/schweizer5-eventlocation-frankfurt-1.jpg",
+    "name": "Schweizer5",
+    "url": ""
+  }
   </script>
 
   <!-- favicon -->
