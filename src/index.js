@@ -11,11 +11,11 @@ const rellax = new Rellax('.rellax');
 document.querySelector('main').classList.add('parallax');
 
 // Initial resize
-window.onload = ImageParentResizer.resize;
+// window.onload = ImageParentResizer.resize;
 
 // Resize when the viewport changes as well
-let onResizeTimeout;
-window.onresize = () => {
-  clearTimeout(onResizeTimeout);
-  onResizeTimeout = setTimeout(ImageParentResizer.resize, 150);
-};
+// let onResizeTimeout;
+// window.onresize = () => {
+//   clearTimeout(onResizeTimeout);
+//   onResizeTimeout = setTimeout(ImageParentResizer.resize, 150);
+// };

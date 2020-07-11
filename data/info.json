@@ -1,0 +1,17 @@
+{
+  "name": "Rental Request",
+  "manager": {
+    "firstName": "Franci",
+    "lastName": "Rotariu",
+    "title": "General Manager"
+  },
+  "address": {
+    "street": "Schweizer Straße 5",
+    "postalCode": "60594",
+    "city": "Frankfurt am Main"
+  },
+  "contact": {
+    "mobile": "+49 173 9658394",
+    "email": "request@schweizer5.de"
+  }
+}

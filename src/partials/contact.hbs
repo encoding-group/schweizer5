@@ -1,0 +1,14 @@
+<div class="contact" id="rental-request">
+    <h2>{{data.name}}</h2>
+    <h3>{{data.manager.firstName}} {{data.manager.lastName}}<br />{{data.manager.title}}</h3>
+    <address>
+        <p>
+            {{data.address.street}}<br />
+            {{data.address.postalCode}} {{data.address.city}}
+        </p>
+        <p>
+            {{data.contact.mobile}}<br />
+            <a href="mailto:{{data.contact.email}}" title="">{{data.contact.email}}</a>
+        </p>
+    </address>
+</div>

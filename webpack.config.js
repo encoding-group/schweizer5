@@ -1,8 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const meta = require('./src/js/meta-loader');
 const content = require('./src/js/content-loader')();
+const dataLoader = require('./src/js/data-loader');
 
 module.exports = {
   entry: './src/index.js',
@@ -15,6 +15,9 @@ module.exports = {
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
+        query: {
+          partialDirs: [path.join(__dirname, 'src', 'partials')],
+        },
       },
       {
         test: /\.s[ac]ss$/,
@@ -46,7 +49,9 @@ module.exports = {
       template: './src/index.hbs',
       filename: './index.html',
       templateParameters: {
-        meta,
+        meta: dataLoader('./data/meta.json'),
+        info: dataLoader('./data/info.json'),
+        credits: dataLoader('./data/credits.json'),
         content,
       },
     }),
