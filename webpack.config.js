@@ -34,10 +34,20 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.svg$/,
         loader: 'file-loader',
         options: {
           name: '[path][name].[ext]',
+        },
+      },
+      {
+        test: /\.(jpe?g|png)$/i,
+        loader: 'responsive-loader',
+        options: {
+          adapter: require('responsive-loader/sharp'),
+          sizes: [500, 1000, 2000],
+          outputPath: './uploads',
+          name: '[name]-[width].[ext]',
         },
       },
     ],
