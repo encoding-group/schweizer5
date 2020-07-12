@@ -55,7 +55,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title: 'Test title',
+      title: 'Schweizer5',
       template: './src/index.hbs',
       filename: './index.html',
       templateParameters: {
