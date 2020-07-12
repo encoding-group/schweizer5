@@ -19,7 +19,7 @@ const requireImages = () => {
   ];
   let responsiveImages = {};
   for (let image of images) {
-    let imageData = require(`../uploads/responsive/${image}.jpg?sizes[]=500,sizes[]=1000,sizes[]=2000`);
+    let imageData = require(`../uploads/responsive/${image}.jpg?sizes[]=600,sizes[]=900,sizes[]=1200,sizes[]=1800`);
     const img = document.createElement('img');
     img.setAttribute('srcSet', imageData.srcSet);
     img.setAttribute('src', imageData.src);

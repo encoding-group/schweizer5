@@ -45,7 +45,8 @@ module.exports = {
         loader: 'responsive-loader',
         options: {
           adapter: require('responsive-loader/sharp'),
-          sizes: [500, 1000, 2000],
+          sizes: [600, 900, 1200, 1800],
+          quality: 80,
           outputPath: './uploads',
           name: '[name]-[width].[ext]',
         },
