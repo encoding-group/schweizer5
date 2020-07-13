@@ -10,3 +10,15 @@ header {
 .white {
 	color: #fff;
 }
+
+main {
+	> div,
+	> figure {
+		transform: translateY(1px);
+	}
+}
+
+p {
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}

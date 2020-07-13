@@ -12,7 +12,7 @@ class ParaPortElement {
     }
     isVisible( position ){
 
-        console.log( this.element.getBoundingClientRect() );
+        // console.log( this.element.getBoundingClientRect() );
 
         let top = this.element.getBoundingClientRect().top;
         let bottom = this.element.getBoundingClientRect().bottom;
