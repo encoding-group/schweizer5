@@ -4,12 +4,13 @@
 /* basics */
 html {
 	font-size: 1.5rem;
+    scroll-behavior: smooth;
 }
 
 /* typography */
 html {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: bold;
+    font-weight: bold;
 }
 body {
 	line-height: 1.1;
