@@ -1,6 +1,10 @@
 footer {
 	.contact {
 		@include offset(1);
+
+		.phone {
+			letter-spacing: 0.03em;
+		}
 	}
 	aside {
 		font-size: 0.4rem;
