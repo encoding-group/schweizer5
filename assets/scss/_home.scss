@@ -18,12 +18,16 @@ header {
 }
 
 footer {
-    padding-top: step(2);
-    .color {
-        bottom: step(-4);
-    }
+    position: relative;
     .contact {
-        padding-bottom: step(1);
+        margin-top: step(1);
+        margin-bottom: step(1);
+    }
+    .color {
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }
 
@@ -46,14 +50,13 @@ footer {
 
     padding: 0;
 
-    .text > div,
-    .table {
-        margin: step(1) 0;
-    }
-
     .text {
         @include width(8);
         @include offset(1);
+        > div {
+            margin-top: step(0.5);
+            margin-bottom: step(0.5);
+        }
     }
 
     .table {
@@ -92,8 +95,21 @@ main.parallax {
         @include offset( $i );
     }
 }
+.offset-half {
+    margin-left: step( 0.5 );
+}
 @for $i from 1 through 30 {
     .height-#{$i} {
         @include height( $i );
+    }
+}
+@for $i from 1 through 30 {
+    .overlap-#{$i} {
+        margin-top: step( -$i );
+    }
+}
+@for $i from 1 through 30 {
+    .top-#{$i} {
+        margin-top: step( $i );
     }
 }

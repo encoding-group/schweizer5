@@ -1,13 +1,10 @@
 footer {
 	.contact {
-		padding: 1rem;
-		padding-left: 0;
 		@include offset(1);
 	}
 	aside {
 		font-size: 0.4rem;
 		padding: 1em;
-		text-align: center;
 		ul, li, a {
 			display: inline-block;
 		}
