@@ -3,8 +3,28 @@
 
 /* basics */
 html {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
     scroll-behavior: smooth;
+}
+@media only screen and (min-width: 700px) {
+    html {
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (min-width: 900px) {
+    html {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    html {
+        font-size: 2rem;
+    }
 }
 
 /* typography */
