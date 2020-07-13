@@ -11,6 +11,9 @@ html {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 }
+body {
+	line-height: 1.1;
+}
 
 ::selection {
 	background-color: $petrol;
@@ -18,8 +21,21 @@ html {
 
 @import 'content';
 
-main {
-	padding: 1rem;
+.color {
+    &.beige {
+        background-color: $beige;
+    }
+    &.olive {
+        background-color: $olive;
+    }
+    &.petrol {
+        background-color: $petrol;
+    }
+}
+.text {
+    &.white {
+        color: #fff;
+    }
 }
 
 @import 'header';
@@ -27,32 +43,10 @@ main {
 body.home {
 	@import 'home';
 }
-
-@import 'footer';
-
-.images {
-	display: none;
-}
-
-header {
-	position: absolute !important;
-	top: 0;
-	width: 100%;
-	z-index: 10;
-}
-
-.white {
-	color: #fff;
-}
-
-main {
-	> div,
-	> figure {
-		transform: translateY(1px);
+body.imprint {
+	main {
+		padding: 1rem;
 	}
 }
 
-p {
-	-webkit-hyphens: auto;
-	hyphens: auto;
-}
+@import 'footer';

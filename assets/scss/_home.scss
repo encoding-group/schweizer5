@@ -1,8 +1,7 @@
 header,
 footer {
-    position: relative;
     .color {
-        z-index: -5;
+        z-index: -1;
         position: absolute;
         left: 0;
         width: 100%;
@@ -32,55 +31,28 @@ footer {
 }
 
 .color {
-    height: 3rem;
-    &.beige {
-        background-color: $beige;
-    }
-    &.olive {
-        background-color: $olive;
-    }
-    &.petrol {
-        background-color: $petrol;
-    }
+    min-height: 3rem;
 }
 
 main,
 header,
 footer {
 
-    padding: 0;
-
     .text {
-        @include width(8);
-        @include offset(1);
-        > div {
-            margin-top: step(0.5);
-            margin-bottom: step(0.5);
-        }
+        z-index: 1;
+        transform: translateY(1px);
     }
-
+    .image {
+        z-index: -1;
+        transform: translateY(1px);
+    }
+    .color {
+        z-index: -2;
+        transform: translateY(1px);
+    }
     .table {
         font-size: 0.7rem;
-    }
-
-    .deko {
-        position: relative;
-        figure,
-        .color {
-            position: absolute;
-            z-index: -1;
-        }
-    }
-
-}
-
-main.parallax {
-
-    .text {
-        position: relative;
-        > div {
-            z-index: 10;
-        }
+        transform: translateY(1px);
     }
 
 }
