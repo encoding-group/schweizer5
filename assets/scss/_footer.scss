@@ -1,6 +1,15 @@
 footer {
 	.contact {
 		@include offset(1);
+
+		.zip,
+		.phone {
+			letter-spacing: 0.03em;
+		}
+		.phone {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 	aside {
 		font-size: 0.4rem;

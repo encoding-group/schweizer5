@@ -1,9 +1,15 @@
 header {
 
+    position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+
     .top {
         padding: 1rem;
         display: flex;
         .logo {
+
         }
         nav {
             flex: 1;
@@ -16,7 +22,6 @@ header {
             word-break: keep-all;
             text-align: center;
             padding-left: 1rem;
-            margin-bottom: 0.1rem;
         }
         img {
             width: 7rem;
@@ -27,6 +32,10 @@ header {
     nav {
         text-align: right;
 
+        a {
+            border-bottom: 1.5px solid #000;
+            text-decoration: none;
+        }
         a.scroll {
             &:after {
                 // content: '↓';

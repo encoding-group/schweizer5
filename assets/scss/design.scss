@@ -3,13 +3,37 @@
 
 /* basics */
 html {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+    scroll-behavior: smooth;
+}
+@media only screen and (min-width: 700px) {
+    html {
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (min-width: 900px) {
+    html {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    html {
+        font-size: 2rem;
+    }
 }
 
 /* typography */
 html {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: bold;
+    font-weight: bold;
+}
+body {
+	line-height: 1.1;
 }
 
 ::selection {
@@ -18,8 +42,21 @@ html {
 
 @import 'content';
 
-main {
-	padding: 1rem;
+.color {
+    &.beige {
+        background-color: $beige;
+    }
+    &.olive {
+        background-color: $olive;
+    }
+    &.petrol {
+        background-color: $petrol;
+    }
+}
+.text {
+    &.white {
+        color: #fff;
+    }
 }
 
 @import 'header';
@@ -27,9 +64,10 @@ main {
 body.home {
 	@import 'home';
 }
+body.imprint {
+	main {
+		padding: 1rem;
+	}
+}
 
 @import 'footer';
-
-.images {
-	display: none;
-}
