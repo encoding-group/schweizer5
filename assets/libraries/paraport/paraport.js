@@ -24,7 +24,7 @@ class ParaPortElement {
             this.element.classList.remove('para-visible');
         }
 
-        this.offset = top * 0.05 * this.speed;
+        this.offset = top * 0.1 * this.speed;
 
     }
     set offset( offset ){
