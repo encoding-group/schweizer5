@@ -21,3 +21,10 @@ To make this website visible under your custom domain, please follow these steps
 5. Enter your domain name into the `Custom domain` input field, hit save and wait for about 24 hours.		
 
 [Read more on the GitHub Pages Help page](https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site).
+
+## Development
+
+Compile SCSS
+```
+sass --watch assets/scss:assets/css
+```

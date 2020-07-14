@@ -1,15 +1,12 @@
 footer {
 	.contact {
 		@include left(1);
-
-		.zip,
-		.phone {
-			letter-spacing: 0.05em;
-		}
-		.phone {
-			color: inherit;
+		a {
 			text-decoration: none;
-			word-spacing: -0.13em;
+			color: inherit;
+		}
+		.email {
+			@include underline;
 		}
 	}
 	aside {

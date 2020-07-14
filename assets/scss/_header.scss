@@ -33,7 +33,7 @@ header {
         text-align: right;
 
         a {
-            border-bottom: 1.5px solid #000;
+            @include underline;
             text-decoration: none;
         }
         a.scroll {

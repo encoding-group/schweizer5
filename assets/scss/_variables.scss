@@ -17,3 +17,7 @@ $petrol: #456d6d;
 @mixin height( $i ) {
     height: step( $i ) !important;
 }
+
+@mixin underline() {
+    border-bottom: 1.5px solid #000;
+}
