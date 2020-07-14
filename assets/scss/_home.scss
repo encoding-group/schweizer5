@@ -62,26 +62,13 @@ footer {
         @include width( $i );
     }
 }
-@for $i from 1 through 10 {
-    .offset-#{$i} {
-        @include offset( $i );
+@for $i from 1 through 20 {
+    [data-left="#{$i*0.5}"] {
+        @include left( $i*0.5 );
     }
-}
-.offset-half {
-    margin-left: step( 0.5 );
 }
 @for $i from 1 through 30 {
     .height-#{$i} {
         @include height( $i );
-    }
-}
-@for $i from 1 through 30 {
-    .overlap-#{$i} {
-        margin-top: step( -$i );
-    }
-}
-@for $i from 1 through 30 {
-    .top-#{$i} {
-        margin-top: step( $i );
     }
 }

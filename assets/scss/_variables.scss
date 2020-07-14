@@ -6,11 +6,11 @@ $petrol: #456d6d;
     @return #{ 10 * $i }vw;
 }
 @mixin width( $i ) {
-    width: #{ 10 * $i }vw !important;
+    width: step( $i ) !important;
 }
-@mixin offset( $i ) {
-    margin-left: #{ 10 * $i }vw !important;
+@mixin left( $i ) {
+    margin-left: step( $i ) !important;
 }
 @mixin height( $i ) {
-    height: #{ 10 * $i }vw !important;
+    height: step( $i ) !important;
 }

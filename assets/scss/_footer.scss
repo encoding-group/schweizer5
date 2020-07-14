@@ -1,6 +1,6 @@
 footer {
 	.contact {
-		@include offset(1);
+		@include left(1);
 
 		.zip,
 		.phone {

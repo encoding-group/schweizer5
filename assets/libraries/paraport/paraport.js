@@ -1,88 +1,96 @@
-class ParaPortElement {
-    constructor( element ) {
+// v 2020 07 14
 
-        this.element = element;
-        this.speed = this.getSpeed();
+class ParaportElement {
+    constructor(element, defaultSpeed = 2) {
+      this._element = element;
 
-        console.log( this.element.getBoundingClientRect() );
+      this._speed = parseFloat(
+        this._element.getAttribute("data-para-speed") || defaultSpeed
+      ) * 0.05;
 
+      this._centerPoint = (
+        window.innerHeight - this._element.getBoundingClientRect().height
+      ) * 0.5;
+
+      this._visible = undefined;
+      this._lastVisible = undefined;
     }
-    getSpeed(){
-        return parseFloat( this.element.getAttribute('data-para-speed') || 2 );
+
+    isVisible() {
+      let box = this._element.getBoundingClientRect();
+
+      this.offset = - (this._centerPoint - box.top) * this._speed;
+
+      this._visible = box.y < window.innerHeight && box.bottom > 0;
+
+      if (this._visible === this._lastVisible) return;
+
+      if (this._visible === true) {
+        this._element.classList.add("para-visible");
+      } else {
+        this._element.classList.remove("para-visible");
+      }
+      this._lastVisible = this._visible;
     }
-    isVisible( position ){
 
-        // console.log( this.element.getBoundingClientRect() );
-
-        let top = this.element.getBoundingClientRect().top;
-        let bottom = this.element.getBoundingClientRect().bottom;
-        let height = this.element.getBoundingClientRect().height;
-
-        if( top < position && bottom > 0 ){
-            this.element.classList.add('para-visible');
-        } else {
-            this.element.classList.remove('para-visible');
-        }
-
-        this.offset = top * 0.1 * this.speed;
-
+    onResize() {
+      this._centerPoint = (
+        window.innerHeight - this._element.getBoundingClientRect().height
+      ) * 0.5;
     }
-    set offset( offset ){
-        this.element.style.transform = `translateY(${offset}px)`;
-        // this.element.querySelector('span').innerHTML = `${offset}px`;
+
+    get speed() {
+      return this._speed;
     }
-}
 
-class Paraport {
-    constructor( selector = '.para' ) {
+    set offset(offset) {
+      this._element.style.transform = `translateY(${offset}px)`;
+    }
+  }
 
-        let elements = document.querySelectorAll( selector );
+  class Paraport {
+    constructor(selector = ".para", defaultSpeed = 2) {
+      let elements = document.querySelectorAll(selector);
 
-        if( elements.length < 1 ){
-            console.warning('No elements found');
-            return;
-        }
+      if (elements.length < 1) {
+        console.warn(`No elements found matching ${selector}`);
+        return;
+      }
 
-        this.elements = [];
-        for (const element of elements) {
-            this.elements.push( new ParaPortElement( element ) );
-        }
+      this._elements = [];
+      for (const element of elements) {
+        this._elements.push(new ParaportElement(element, defaultSpeed));
+      }
 
-        this.window = this.getWindow();
+      document.body.classList.add("para-initalized");
 
-        document.body.classList.add('para-initalized');
-        console.log( this );
+      this.onScroll();
 
-        let that = this;
-        that.onScroll();
+      let context = this;
 
-        let scrollTimeout = false;
-        let lastScrollPosition, scrollPosition;
-        window.addEventListener('scroll', (event)=>{
-            scrollPosition = Math.floor( scrollPosition );
-            if( scrollTimeout === false && scrollPosition !== lastScrollPosition ) {
-                window.requestAnimationFrame(function() {
-
-                    that.onScroll();
-
-                    lastScrollPosition = scrollPosition;
-                    scrollTimeout = false;
-                });
-                scrollTimeout = true;
-            }
+      window.addEventListener("scroll", () => {
+        window.requestAnimationFrame( () => {
+          context.onScroll();
         });
+      }, {passive: true});
+
+      window.addEventListener("resize", () => {
+        window.requestAnimationFrame( () => {
+          context.onResize();
+        });
+      }, {passive: true});
 
     }
-    getWindow(){
-        return {
-            width: window.innerWidth,
-            height: window.innerHeight
-        };
+
+    onScroll() {
+      for (let i = this._elements.length - 1; i >= 0; i--) {
+        this._elements[i].isVisible();
+      }
     }
-    onScroll(){
-        // this.elements[4].isVisible( this.window.height );
-        for (const element of this.elements) {
-            element.isVisible( this.window.height );
-        }
+
+    onResize() {
+      for (let i = this._elements.length - 1; i >= 0; i--) {
+        this._elements[i].onResize();
+      }
     }
-}
+  }
