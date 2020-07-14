@@ -56,19 +56,3 @@ footer {
     }
 
 }
-
-@for $i from 1 through 10 {
-    .width-#{$i} {
-        @include width( $i );
-    }
-}
-@for $i from 1 through 20 {
-    [data-left="#{$i*0.5}"] {
-        @include left( $i*0.5 );
-    }
-}
-@for $i from 1 through 30 {
-    .height-#{$i} {
-        @include height( $i );
-    }
-}
