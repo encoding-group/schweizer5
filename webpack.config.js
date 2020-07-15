@@ -17,6 +17,7 @@ module.exports = {
         loader: 'handlebars-loader',
         query: {
           partialDirs: [path.join(__dirname, 'src', 'partials')],
+          helperDirs: [path.join(__dirname, 'src', 'helpers')],
         },
       },
       {
