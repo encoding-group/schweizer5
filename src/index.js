@@ -1,9 +1,11 @@
-import ImageParentResizer from './js/image-parent-resizer';
-import Rellax from 'rellax';
+import Paraport from './js/paraport';
 import './styles/design.scss';
+
+const paraport = new Paraport('.para');
 
 // Handle image uploads
 const requireAll = (r) => r.keys().forEach(r);
+requireAll(require.context('./images', true, /\.(png|svg|jpg|gif)$/));
 requireAll(require.context('../uploads', true, /\.(png|svg|jpg|gif)$/));
 
 // responsive images
@@ -35,21 +37,26 @@ const requireImages = () => {
 const images = requireImages();
 
 document
-  .querySelectorAll(`[data-imagename]`)
+  .querySelectorAll('[data-imagename]')
   .forEach((figure) =>
     figure.appendChild(images[figure.getAttribute('data-imagename')])
   );
 
-// Initialize Rellax js for parallaxing
-const rellax = new Rellax('.rellax');
-document.querySelector('main').classList.add('parallax');
-
-// Initial resize
-// window.onload = ImageParentResizer.resize;
-
-// Resize when the viewport changes as well
-// let onResizeTimeout;
-// window.onresize = () => {
-//   clearTimeout(onResizeTimeout);
-//   onResizeTimeout = setTimeout(ImageParentResizer.resize, 150);
-// };
+for (const element of document.querySelectorAll('.layout')) {
+  if (element.dataset.left) {
+    let left = parseFloat(element.dataset.left || 0) * 10;
+    element.style.marginLeft = `${left}vw`;
+  }
+  if (element.dataset.top) {
+    let top = parseFloat(element.dataset.top || 0) * 10;
+    element.style.marginTop = `${top}vw`;
+  }
+  if (element.dataset.width) {
+    let width = parseFloat(element.dataset.width || 0) * 10;
+    element.style.width = `${width}vw`;
+  }
+  if (element.dataset.height) {
+    let height = parseFloat(element.dataset.height || 0) * 10;
+    element.style.height = `${height}vw`;
+  }
+}

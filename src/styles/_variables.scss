@@ -5,12 +5,19 @@ $petrol: #456d6d;
 @function step($i) {
   @return #{10 * $i}vw;
 }
-@mixin width($i) {
-  width: #{10 * $i}vw !important;
+@mixin left($i) {
+  margin-left: step($i) !important;
 }
-@mixin offset($i) {
-  margin-left: #{10 * $i}vw !important;
+@mixin top($i) {
+  margin-top: step($i) !important;
+}
+@mixin width($i) {
+  width: step($i) !important;
 }
 @mixin height($i) {
-  height: #{10 * $i}vw !important;
+  height: step($i) !important;
+}
+
+@mixin underline() {
+  border-bottom: 1.5px solid #000;
 }
