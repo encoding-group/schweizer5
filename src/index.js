@@ -42,6 +42,7 @@ document
     figure.appendChild(images[figure.getAttribute('data-imagename')])
   );
 
+// Initializing layout
 for (const element of document.querySelectorAll('.layout')) {
   if (element.dataset.left) {
     let left = parseFloat(element.dataset.left || 0) * 10;
