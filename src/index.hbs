@@ -142,8 +142,8 @@
           <li>Outdoor spaces (terrace and garden)</li>
         </ul>
 
-        <h3><a target="_blank" title="Find address on Google Maps"
-            href="https://goo.gl/maps/jMFanuSynf3aoLfS7">Venue</a></h3>
+        <h3><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>Venue</a>
+        </h3>
         <ul>
           <li>Schweizer Strasse 5</li>
           <li>Museum district</li>
@@ -151,7 +151,7 @@
           <li>Subway Station: Gartenstrasse <i>200 m</i></li>
           <li>Public Car Park: Parkhaus Untermainanlage <i>500 m</i></li>
           <li>Main train station: Frankfurt Hbf <i>1000 m</i></li>
-          <li><a target="_blank" title="Find address on Google Maps" href="https://goo.gl/maps/jMFanuSynf3aoLfS7">See on
+          <li><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>See on
               Map</a></li>
         </ul>
 
@@ -166,32 +166,8 @@
 
   <footer lang="en">
 
-    <div class="contact" id="rental-request">
-      <h2>Rental Request</h2>
-      <h3>Franci Rotariu<br />General Manager</h3>
-      <address>
-        <p>
-          <a target="_blank" title="Find address on Google Maps" href="https://goo.gl/maps/jMFanuSynf3aoLfS7">
-            Schweizer Strasse 5<br />
-            <i>60594</i> Frankfurt am Main
-          </a>
-        </p>
-        <p>
-          <a class="phone numbers" title="Call Franci Rotariu now" href="tel:+491739658394">+49 173 965 83 94</a><br />
-          <a class="email" title="Send an Email request to request@schweizer5.de"
-            href="mailto:request@schweizer5.de">request@schweizer5.de</a>
-        </p>
-      </address>
-    </div>
-
-    <aside>
-      <a title="Open imprint in new tab" href="imprint.html" target="_blank" rel="nofollow">Imprint</a>
-      <ul class="credits" title="&copy; 2020">
-        <li>Photografie: <a href="https://marinaackar.de" target="_blank" title="marinaackar.de">Marina Ackar</a></li>
-        <li>Form: <a href="http://surfacegrafik.de" target="_blank" title="surfacegrafik.de">Markus Weisbeck</a></li>
-        <li>Coding: <a href="https://encoding.group" target="_blank" title="encoding.group">Moritz Ebeling</a></li>
-      </ul>
-    </aside>
+    {{>contact data=info}}
+    {{>credits data=credits}}
 
     <div class="layout color beige para" data-height="6" data-width="9" data-para-speed="0.5"></div>
 
