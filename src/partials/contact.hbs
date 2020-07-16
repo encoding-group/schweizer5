@@ -1,0 +1,18 @@
+<div class="contact" id="rental-request">
+  <h2>{{data.name}}</h2>
+  <h3>{{data.manager.firstName}} {{data.manager.lastName}}<br />{{data.manager.title}}</h3>
+  <address>
+    <p>
+      <a target="_blank" title="Find address on Google Maps" {{{href data.contact.google}}}>
+        {{data.address.street}}<br />
+        <i>{{data.address.postalCode}}</i> {{data.address.city}}
+      </a>
+    </p>
+    <p>
+      <a class="phone numbers" title="Call {{data.manager.firstName}} {{data.manager.lastName}} now"
+        href="tel:{{trimspace data.contact.mobile}}">{{{addnbsp data.contact.mobile}}}</a><br />
+      <a class="email" title="Send an Email request to {{data.contact.email}}"
+        href="mailto:{{data.contact.email}}">{{data.contact.email}}</a>
+    </p>
+  </address>
+</div>

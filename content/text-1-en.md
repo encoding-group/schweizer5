@@ -1,0 +1,1 @@
+The historic event space Schweizer 5 is located in a unique, listed building dating back to 1886. It is one of the very few buildings from this epoch still largely in its original condition. Nestled in the museum district of Frankfurt, in the heart of the city, the view from the terrace opens up to the enchanting garden and Metzlerpark.
