@@ -18,9 +18,13 @@ This website will be hosted on a Netlify free plan:
 https://happy-ptolemy-e6466e.netlify.app
 
 To use a custom domain on this website, you need to create a DNS Record for your domain. To do that, go to the DNS Settings of your domain admin panel and create a new record:
+```
 DNS `A` record
 Host: `@`
 IP: `104.198.14.52`
+```
+
+More info: https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain
 
 ## Development
 
