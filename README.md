@@ -12,15 +12,15 @@ All content that is shown on the website can be found in the `content` directory
 
 **Meta information**		
 
-## Add custom domain
-To make this website visible under your custom domain, please follow these steps:		
-1. Register a domain at a registry of your choice, eg. Ionos or United Domains.		
-2. Go to `DNS Settings` inside your domain administration panel.		
-3. Enter some xxx settings		
-4. Go to the `Settings` tab inside this GitHub repository and scroll town to the `GitHub Pages` section.		
-5. Enter your domain name into the `Custom domain` input field, hit save and wait for about 24 hours.		
+## Hosting
+This website will be hosted on a Netlify free plan:
 
-[Read more on the GitHub Pages Help page](https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site).
+https://happy-ptolemy-e6466e.netlify.app
+
+To use a custom domain on this website, you need to create a DNS Record for your domain. To do that, go to the DNS Settings of your domain admin panel and create a new record:
+DNS `A` record
+Host: `@`
+IP: `104.198.14.52`
 
 ## Development
 
