@@ -10,7 +10,8 @@ All content that is shown on the website can be found in the following directori
 - `/uploads/responsive` for all images
 
 After editing and commiting new changes it will take a few minutes for the changes to appear on the live website.
-:warning: All files in this repository are publicly available. That means you should never enter any private information while editing content!**
+
+:warning: All files in this repository are publicly available. That means you should never enter any private information while editing content! :warning: 
 
 ## Hosting
 
