@@ -27,7 +27,7 @@ const requireImages = () => {
     img.setAttribute('src', imageData.src);
     img.setAttribute('width', '100%');
     img.setAttribute('height', 'auto');
-    img.setAttribute('alt', 'Schweizer5');
+    img.setAttribute('alt', 'Schweizer 5 Event Location in Frankfurt am Main');
     responsiveImages[image] = img;
   }
 
