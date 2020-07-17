@@ -9,7 +9,8 @@ All content that is shown on the website can be found in the following directori
 - `/data` for all meta and contact information
 - `/uploads/responsive` for all images
 
-> :warning: All files in this repository are publicly available. That means you should never enter any private information while editing content!**
+After editing and commiting new changes it will take a few minutes for the changes to appear on the live website.
+:warning: All files in this repository are publicly available. That means you should never enter any private information while editing content!**
 
 ## Hosting
 
