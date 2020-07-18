@@ -69,7 +69,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      title: 'Impressum – Schweizer 5',
+      title: 'Impressum | Schweizer 5',
       template: './src/imprint.hbs',
       filename: './imprint.html',
       templateParameters: {
