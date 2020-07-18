@@ -7,7 +7,7 @@ class ParaportElement {
     this._speed =
       parseFloat(
         this._element.getAttribute('data-para-speed') || defaultSpeed
-      ) * 0.08;
+      ) * 0.13;
 
     this._centerPoint =
       (window.innerHeight - this._element.getBoundingClientRect().height) * 0.5;
