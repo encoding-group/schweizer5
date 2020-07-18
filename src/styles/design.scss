@@ -65,9 +65,7 @@ body.home {
   @import 'home';
 }
 body.imprint {
-  main {
-    padding: 1rem;
-  }
+  @import 'imprint';
 }
 
 @import 'footer';

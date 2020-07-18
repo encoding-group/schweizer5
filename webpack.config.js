@@ -57,7 +57,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title: 'Schweizer5',
+      title: 'Schweizer 5',
       template: './src/index.hbs',
       filename: './index.html',
       templateParameters: {
@@ -69,9 +69,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      title: 'Impressum | Schweizer5',
+      title: 'Impressum – Schweizer 5',
       template: './src/imprint.hbs',
       filename: './imprint.html',
+      templateParameters: {
+        meta: dataLoader('./data/meta.json'),
+        info: dataLoader('./data/info.json'),
+        credits: dataLoader('./data/credits.json')
+      },
     }),
   ],
 };

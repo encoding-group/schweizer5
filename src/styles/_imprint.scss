@@ -1,0 +1,41 @@
+header {
+    position: static;
+    .logo {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.contact {
+    h2 {
+        display: none;
+    }
+    a {
+        border-bottom: none;
+    }
+}
+
+main {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol {
+        margin: 1rem;
+    }
+
+}
+
+footer {
+    margin-top: 4rem;
+}
+
+aside {
+    padding: 1rem;
+}
