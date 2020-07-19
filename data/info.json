@@ -1,5 +1,6 @@
 {
   "name": "Rental Request",
+  "url": "https://schweizer5.de",
   "manager": {
     "firstName": "Franci",
     "lastName": "Rotariu",
@@ -8,7 +9,10 @@
   "address": {
     "street": "Schweizer Straße 5",
     "postalCode": "60594",
-    "city": "Frankfurt am Main"
+    "city": "Frankfurt am Main",
+    "country": "Germany",
+    "latitude": "50.105010",
+    "longitude": "8.678330"
   },
   "contact": {
     "mobile": "+49 173 965 83 94",
