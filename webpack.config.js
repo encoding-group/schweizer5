@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 const content = require('./src/js/content-loader')();
@@ -22,7 +23,18 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          // 'style-loader',
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true, importLoaders: 1 },
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: true },
+          },
+        ],
       },
       {
         test: /\.m?js$/,
@@ -55,6 +67,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
     new HtmlWebpackPlugin({
       hash: true,
       title: 'Schweizer 5',
@@ -75,7 +90,7 @@ module.exports = {
       templateParameters: {
         meta: dataLoader('./data/meta.json'),
         info: dataLoader('./data/info.json'),
-        credits: dataLoader('./data/credits.json')
+        credits: dataLoader('./data/credits.json'),
       },
     }),
   ],
