@@ -56,32 +56,34 @@
 
     </div>
 
-    <div class="layout text" data-width="7" data-top="1" data-left="1" lang="de">
-      {{{content.text1de}}}
-    </div>
+    <section data-width="9">
+      <div class="layout text" lang="de">
+        {{{content.text1de}}}
+      </div>
+    </section>
 
-    <div class="layout color beige" data-width="9"></div>
+    <div class="layout color beige"></div>
 
   </header>
 
   <main id="main" class="fade-in">
 
     <section>
-      <div class="layout text white" data-width="8" data-left="1" lang="en">
+      <div class="layout text white" lang="en">
         {{{content.text1en}}}
       </div>
-      <div class="layout color olive para" data-height="20" data-width="8" data-left="2" data-para-speed="0.5"></div>
+      <div class="layout color olive para" data-para-speed="0.5"></div>
     </section>
 
     <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-1" data-width="7" data-para-speed="1">
     </figure>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-2" data-width="9" data-left="1" data-para-speed="2">
+    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-2" data-width="9" data-para-speed="2">
     </figure>
 
     <section>
-      <div class="layout color petrol para" data-height="9" data-width="9" data-para-speed="0.5"></div>
-      <div class="layout text" data-width="6" data-left="3" lang="de">
+      <div class="layout color petrol para" data-para-speed="0.5"></div>
+      <div class="layout text" lang="de">
         {{{content.text2de}}}
       </div>
     </section>
@@ -90,8 +92,8 @@
     </figure>
 
     <section>
-      <div class="layout color olive para" data-height="8" data-width="9" data-left="1" data-para-speed="0.5"></div>
-      <div class="layout text white" data-width="6" data-left="1" lang="en">
+      <div class="layout color olive para" data-para-speed="0.5"></div>
+      <div class="layout text white" lang="en">
         {{{content.text2en}}}
       </div>
     </section>
@@ -100,8 +102,8 @@
     </figure>
 
     <section>
-      <div class="layout color beige para" data-height="11" data-width="9" data-para-speed="1"></div>
-      <div class="layout text" data-width="7" data-left="1" lang="de">
+      <div class="layout color beige para" data-para-speed="1"></div>
+      <div class="layout text" lang="de">
         {{{content.text3de}}}
       </div>
     </section>
@@ -110,8 +112,8 @@
     </figure>
 
     <section>
-      <div class="layout color petrol para" data-height="15" data-width="8" data-left="2" data-para-speed="0.5"></div>
-      <div class="layout text white" data-width="6" data-left="1" lang="en">
+      <div class="layout color petrol para" data-para-speed="0.5"></div>
+      <div class="layout text white" lang="en">
         {{{content.text3en}}}
       </div>
     </section>
@@ -119,7 +121,7 @@
     <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-6" data-width="7" data-left="3" data-para-speed="2">
     </figure>
 
-    <div class="layout table" data-width="4" data-left="0.5" lang="en">
+    <div class="layout table" data-width="4" lang="en">
       <div>
 
         <h3>Features</h3>
@@ -157,10 +159,13 @@
 
   <footer class="fade-in layout" lang="en">
 
-    {{>contact data=info}}
+    <div class="text">
+      {{>contact data=info}}
+    </div>
+
     {{>credits data=credits}}
 
-    <div class="layout color beige" data-height="6" data-width="9"></div>
+    <div class="layout color beige"></div>
 
   </footer>
 
