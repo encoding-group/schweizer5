@@ -6,6 +6,32 @@
   {{{generateMetaTags meta info}}}
   {{{generateOpenGraph meta info}}}
   {{{generateJsonLd meta info}}}
+
+  <style>
+    .fade-in {
+      -webkit-animation: fadein 2s;
+      -moz-animation: fadein 2s;
+      -ms-animation: fadein 2s;
+      -o-animation: fadein 2s;
+      animation: fadein 2s;
+    }
+    @keyframes fadein {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @-moz-keyframes fadein {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @-webkit-keyframes fadein {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @-ms-keyframes fadein {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @-o-keyframes fadein {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+  </style>
+
 </head>
 
 <body class="home">
@@ -26,70 +52,70 @@
 
   <main id="main">
 
-    <div class="layout color beige para" data-height="12" data-width="9" data-para-speed="1"></div>
+    <div class="first layout color beige" data-width="9"></div>
 
-    <div class="layout text" data-width="7" data-left="1" data-top="-8" lang="de">
-      <p>{{{content.text1de}}}</p>
+    <div class="layout text" data-width="7" data-left="1" lang="de">
+      {{{content.text1de}}}
     </div>
 
     <div class="layout color olive para" data-height="20" data-width="8" data-left="2" data-top="1.5"
       data-para-speed="0.5"></div>
 
     <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-1" data-width="7"
-      data-top="-20.5" data-para-speed="1.5">
+      data-top="-20.5" data-para-speed="1">
     </figure>
 
-    <div class="layout text white" data-width="8" data-left="1" data-top="-4" lang="en">
-      <p>{{{content.text1en}}}</p>
+    <div class="layout fade-in text white" data-width="8" data-left="1" data-top="-5" lang="en">
+      {{{content.text1en}}}
     </div>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-2" data-width="9" data-left="1"
+    <figure class="layout fade-in image para" data-imagename="schweizer5-eventlocation-frankfurt-2" data-width="9" data-left="1"
       data-top="1" data-para-speed="2">
     </figure>
 
-    <div class="layout text" data-width="8" data-left="1" lang="de">
-      <p>{{{content.text2de}}}</p>
+    <div class="layout fade-in text" data-width="6" data-left="3" data-top="-1" lang="de">
+      {{{content.text2de}}}
     </div>
 
-    <div class="layout color petrol para" data-height="11" data-width="9" data-top="1.1" data-para-speed="0.75"></div>
+    <div class="layout fade-in color petrol para" data-height="9" data-width="9" data-top="0.8" data-para-speed="0.5"></div>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-3" data-width="8"
-      data-top="-11.5" data-para-speed="1.5">
+    <figure class="layout fade-in image para" data-imagename="schweizer5-eventlocation-frankfurt-3" data-width="8"
+      data-top="-9" data-para-speed="1.5">
     </figure>
 
-    <div class="layout text white" data-width="6" data-left="1" data-top="-5" lang="en">
-      <p>{{{content.text2en}}}</p>
+    <div class="layout fade-in text white" data-width="6" data-left="1" data-top="-6" lang="en">
+      {{{content.text2en}}}
     </div>
 
-    <div class="layout color olive para" data-height="8" data-width="9" data-left="1" data-top="1.5"
+    <div class="layout fade-in color olive para" data-height="8" data-width="9" data-left="1" data-top="1.5"
       data-para-speed="0.5"></div>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-4" data-width="8" data-left="2"
-      data-top="-9" data-para-speed="2">
+    <figure class="layout fade-in image para" data-imagename="schweizer5-eventlocation-frankfurt-4" data-width="8" data-left="2"
+      data-top="-9" data-para-speed="2.5">
     </figure>
 
-    <div class="layout color beige para" data-height="11" data-width="9" data-top="-2" data-para-speed="1"></div>
+    <div class="layout fade-in color beige para" data-height="11" data-width="9" data-top="-2" data-para-speed="1"></div>
 
-    <div class="layout text" data-width="7" data-left="1" data-top="-10" lang="de">
-      <p>{{{content.text3de}}}</p>
+    <div class="layout fade-in text" data-width="7" data-left="1" data-top="-10" lang="de">
+      {{{content.text3de}}}
     </div>
 
-    <div class="layout color petrol para" data-height="15" data-width="8" data-left="2" data-top="5.5"
+    <div class="layout fade-in color petrol para" data-height="15" data-width="8" data-left="2" data-top="5.5"
       data-para-speed="0.5"></div>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-5" data-width="8"
+    <figure class="layout fade-in image para" data-imagename="schweizer5-eventlocation-frankfurt-5" data-width="8"
       data-top="-20" data-para-speed="1.5">
     </figure>
 
-    <div class="layout text white" data-width="6" data-top="-5" data-left="1" lang="en">
-      <p>{{{content.text3en}}}</p>
+    <div class="layout fade-in text white" data-width="6" data-top="-6" data-left="1" lang="en">
+      {{{content.text3en}}}
     </div>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-6" data-width="7"
+    <figure class="layout fade-in image para" data-imagename="schweizer5-eventlocation-frankfurt-6" data-width="7"
       data-top="0.5" data-left="3" data-para-speed="2">
     </figure>
 
-    <div class="layout table" data-width="4" data-top="-8" data-left="0.5" lang="en">
+    <div class="layout fade-in table" data-width="4" data-top="-8" data-left="0.5" lang="en">
       <div>
 
         <h3>Features</h3>
@@ -107,8 +133,7 @@
         <h3><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>Venue</a>
         </h3>
         <ul>
-          <li><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>Schweizer Strasse
-              5</a></li>
+          <li><a target="_blank" class="no-underline" title="Find address on Google Maps" {{{href info.contact.google}}}>Schweizer Strasse&nbsp;5</a></li>
           <li>Museum district</li>
           <li>Frankfurt a.M. / Sachsenhausen Nord</li>
           <li>Subway Station: Gartenstrasse <i>200&nbsp;m</i></li>
@@ -121,18 +146,18 @@
       </div>
     </div>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-7" data-width="8"
+    <figure class="layout fade-in image para" data-imagename="schweizer5-eventlocation-frankfurt-7" data-width="8"
       data-top="0.5" data-para-speed="1.5">
     </figure>
 
   </main>
 
-  <footer lang="en">
+  <footer class="fade-in layout" lang="en" data-top="-1">
 
     {{>contact data=info}}
     {{>credits data=credits}}
 
-    <div class="layout color beige para" data-height="6" data-width="9" data-para-speed="0.5"></div>
+    <div class="layout fade-in color beige" data-height="6" data-width="9"></div>
 
   </footer>
 
