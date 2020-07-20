@@ -1,22 +1,12 @@
 header,
-footer {
-  position: relative;
-  .color {
-    width: step(9);
-  }
-}
-
-footer {
-  padding: step(1);
-  .color {
-    top: unset;
-    bottom: 0;
-  }
-}
-
-header,
 main,
 footer {
+
+  section {
+    position: relative;
+    width: step(9);
+    padding: step(1);
+  }
 
   .text,
   .image,
@@ -44,19 +34,40 @@ footer {
     height: 100%;
   }
 
-  .text {
-    // margin: step(1);
-  }
+}
 
+main {
   section {
-    position: relative;
-    padding: step(1);
-    .text {
-    }
-  }
 
+    &.r{
+      margin-left: step(1);
+    }
+
+  }
 }
 
 .table {
-  font-size: 0.7rem;
+  padding: step(1);
+  width: step(10);
+}
+
+header,
+footer {
+  position: relative;
+  .color {
+    width: step(9);
+  }
+}
+
+footer {
+  .color {
+    top: unset;
+    bottom: 0;
+  }
+  aside {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+  }
 }
