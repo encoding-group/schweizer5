@@ -34,6 +34,16 @@ footer {
   min-height: 3rem;
 }
 
+.color.first {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+
+  + .text {
+    margin-top: 20rem;
+  }
+}
+
 main,
 header,
 footer {
