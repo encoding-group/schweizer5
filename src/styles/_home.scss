@@ -8,6 +8,11 @@ footer {
     padding: step(1);
   }
 
+  section.table {
+    padding: step(1);
+    width: step(10);
+  }
+
   .text,
   .image,
   .color,
@@ -36,21 +41,6 @@ footer {
 
 }
 
-main {
-  section {
-
-    &.r{
-      margin-left: step(1);
-    }
-
-  }
-}
-
-.table {
-  padding: step(1);
-  width: step(10);
-}
-
 header,
 footer {
   position: relative;
@@ -69,5 +59,37 @@ footer {
     bottom: 0;
     left: 0;
     padding: 1em;
+  }
+}
+
+main {
+  section {
+    &.r{
+      margin-left: step(1);
+    }
+    @media only screen and (min-width: 900px) {
+      &.s1 {
+        width: step(8);
+        margin-left: step(2);
+      }
+      &.s2 {
+        padding-left: step(3);
+      }
+      &.s3 {
+        padding-right: step(2);
+      }
+      &.s5 {
+        width: step(8);
+        margin-left: step(2);
+      }
+      &.table {
+        padding-right: step(3);
+      }
+    }
+    @media only screen and (min-width: 1200px) {
+      &.table {
+        padding-right: step(5);
+      }
+    }
   }
 }
