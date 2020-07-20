@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 
 const content = require('./src/js/content-loader')();
@@ -94,5 +95,11 @@ module.exports = {
         credits: dataLoader('./data/credits.json'),
       },
     }),
+    new FaviconsWebpackPlugin({
+      logo: './src/images/favicon.svg',
+      cache: true,
+      prefix: 'favicon/',
+      inject: true
+    })
   ],
 };
