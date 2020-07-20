@@ -1,5 +1,6 @@
 header,
 footer {
+  position: relative;
   .color {
     z-index: -1;
     position: absolute;
@@ -17,56 +18,51 @@ header {
 }
 
 footer {
-  position: relative;
   .contact {
     margin-top: step(1);
     margin-bottom: step(1);
   }
   .color {
-    height: 100%;
-    position: absolute;
     bottom: 0;
-    left: 0;
   }
 }
 
-.color {
-  min-height: 3rem;
-}
-
-.color.first {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-
-  + .text {
-    margin-top: 20rem;
-  }
-}
-
-main,
 header,
+main,
 footer {
-  .text {
-    z-index: 1;
+
+  .text,
+  .image,
+  .color,
+  .table {
     transform: translateY(1px);
+  }
+
+  .text,
+  .table {
+    z-index: 1;
   }
   .image {
     z-index: -1;
-    transform: translateY(1px);
   }
   .color {
     z-index: -2;
-    transform: translateY(1px);
   }
-  .table {
-    font-size: 0.7rem;
-    transform: translateY(1px);
+
+  section {
+
+    .text {
+      margin: step(1);
+    }
+    .color {
+
+
+    }
+
   }
+
 }
 
-a.no-underline,
-h3 > a {
-  text-decoration: none;
-  border: none;
+.table {
+  font-size: 0.7rem;
 }
