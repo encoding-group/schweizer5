@@ -57,6 +57,17 @@ footer {
   }
 }
 
+.text-black {
+  color: #000;
+  text-shadow: 0px 0px 15px #fff;
+}
+.text {
+  &.white {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.13);
+  }
+}
+
 footer {
   margin-top: step(-3);
   padding-top: step(2);
@@ -125,13 +136,55 @@ section.table-wrapper {
   .tables {
     padding: step(0.5);
     position: absolute;
-    top: step(1.5);
+    top: 0;
     @media only screen and (min-width: 900px) {
-      padding: step(1);
+      padding-top: step(1);
+      padding-bottom: step(1);
       padding-right: step(3);
     }
     @media only screen and (min-width: 1200px) {
       padding-right: step(5);
     }
+  }
+}
+
+main {
+  .image {
+    &.i7 {
+      margin-top: step(-2);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    section {
+      &.s2 {
+        margin-top: step(-3);
+      }
+    }
+    .image {
+      &.i1 {
+        margin-top: step(-1);
+      }
+      &.i2 {
+        margin-top: step(-1);
+      }
+      &.i3 {
+        margin-top: step(-2);
+      }
+      &.i4 {
+        margin-top: step(-1);
+      }
+      &.i5 {
+        margin-top: step(-2);
+      }
+      &.i7 {
+        margin-top: step(-1);
+      }
+    }
+  }
+  footer {
+    margin-top: step(-2);
   }
 }
