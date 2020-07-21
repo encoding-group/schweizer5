@@ -87,7 +87,7 @@ main {
       padding-top: step(5);
       margin-top: step(-8);
     }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 600px) {
       &.s1 {
         width: step(8);
         margin-left: step(2);
