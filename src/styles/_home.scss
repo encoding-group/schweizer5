@@ -100,6 +100,11 @@ main {
         padding-left: step(2);
         padding-right: step(1);
       }
+      &.s4 {
+        margin-top: step(-5);
+        padding-top: step(5);
+        padding-bottom: step(1.5);
+      }
       &.s5 {
         margin-left: step(1);
       }
