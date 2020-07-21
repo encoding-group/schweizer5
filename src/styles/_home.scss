@@ -87,6 +87,16 @@ main {
       padding-top: step(5);
       margin-top: step(-8);
     }
+    &.s2 {
+      margin-top: step(-4);
+      padding-top: step(3);
+      padding-bottom: step(1.5);
+    }
+    &.s4 {
+      margin-top: step(-5);
+      padding-top: step(5);
+      padding-bottom: step(1.5);
+    }
     @media only screen and (min-width: 600px) {
       &.s1 {
         width: step(8);
@@ -99,11 +109,6 @@ main {
       &.s3 {
         padding-left: step(2);
         padding-right: step(1);
-      }
-      &.s4 {
-        margin-top: step(-5);
-        padding-top: step(5);
-        padding-bottom: step(1.5);
       }
       &.s5 {
         margin-left: step(1);
@@ -118,10 +123,11 @@ section.table-wrapper {
   width: step(10);
   margin-top: step(-1);
   .tables {
-    padding: step(1);
+    padding: step(0.5);
     position: absolute;
     top: step(1.5);
     @media only screen and (min-width: 900px) {
+      padding: step(1);
       padding-right: step(3);
     }
     @media only screen and (min-width: 1200px) {
