@@ -30,3 +30,13 @@ li i {
   word-spacing: -0.12em;
   letter-spacing: 0.04em;
 }
+
+a.no-underline,
+h3 > a {
+  text-decoration: none;
+  border: none;
+}
+
+.table {
+  font-size: 0.7rem;
+}

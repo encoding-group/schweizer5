@@ -1,72 +1,126 @@
 header,
+main,
 footer {
+
+  section {
+    position: relative;
+    width: step(9);
+    padding: step(1);
+    padding-bottom: step(2);
+  }
+
+  section.tables {
+    padding: step(1);
+    width: step(10);
+    margin-top: step(-1);
+  }
+
+  .text,
+  .image,
+  .color,
+  .tables {
+    transform: translateY(1px);
+  }
+
+  .text,
+  .tables {
+    z-index: 10;
+  }
+  .image {
+    z-index: 1;
+    width: step(8);
+  }
+  > .image {
+    margin-top: step(-1);
+  }
   .color {
     z-index: -1;
     position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
+
 }
 
 header {
-  padding-bottom: step(1) !important;
+  section {
+    z-index: 5;
+  }
+}
+header,
+footer {
+  position: relative;
   .color {
-    top: 0;
+    width: step(9);
   }
 }
 
 footer {
-  position: relative;
-  .contact {
-    margin-top: step(1);
-    margin-bottom: step(1);
-  }
+  margin-top: step(-1);
+  padding-top: step(1);
+
   .color {
-    height: 100%;
+    top: unset;
+    bottom: 0;
+  }
+  aside {
     position: absolute;
     bottom: 0;
     left: 0;
+    padding: 1em;
   }
 }
 
-.color {
-  min-height: 3rem;
+
+
+main {
+  section {
+    margin-top: step(-3);
+    &.r{
+      margin-left: step(1);
+    }
+    &.s1,
+    &.s3,
+    &.s5 {
+      padding-top: step(5);
+      margin-top: step(-8);
+    }
+    @media only screen and (min-width: 900px) {
+      &.s1 {
+        width: step(8);
+        margin-left: step(2);
+      }
+      &.s2 {
+        padding-left: step(2);
+        padding-right: step(2);
+      }
+      &.s3 {
+        padding-left: step(2);
+        padding-right: step(1);
+      }
+      &.s5 {
+        margin-left: step(1);
+      }
+    }
+  }
 }
 
-.color.first {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-
-  + .text {
-    margin-top: 20rem;
+section.table-wrapper {
+  margin: 0;
+  padding: 0;
+  width: step(10);
+  margin-top: step(-1);
+  .tables {
+    padding: step(1);
+    position: absolute;
+    top: step(1.5);
+    @media only screen and (min-width: 900px) {
+      padding-right: step(3);
+    }
+    @media only screen and (min-width: 1200px) {
+      padding-right: step(5);
+    }
   }
-}
-
-main,
-header,
-footer {
-  .text {
-    z-index: 1;
-    transform: translateY(1px);
-  }
-  .image {
-    z-index: -1;
-    transform: translateY(1px);
-  }
-  .color {
-    z-index: -2;
-    transform: translateY(1px);
-  }
-  .table {
-    font-size: 0.7rem;
-    transform: translateY(1px);
-  }
-}
-
-a.no-underline,
-h3 > a {
-  text-decoration: none;
-  border: none;
 }
