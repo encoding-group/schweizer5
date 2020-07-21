@@ -84,7 +84,8 @@ main {
     &.s1,
     &.s3,
     &.s5 {
-      // folgt auf hochformat
+      padding-top: step(5);
+      margin-top: step(-8);
     }
     @media only screen and (min-width: 900px) {
       &.s1 {
