@@ -6,32 +6,35 @@ footer {
     position: relative;
     width: step(9);
     padding: step(1);
+    padding-bottom: step(2);
   }
 
-  section.table {
+  section.tables {
     padding: step(1);
     width: step(10);
+    margin-top: step(-1);
   }
 
   .text,
   .image,
   .color,
-  .table {
+  .tables {
     transform: translateY(1px);
   }
 
   .text,
-  .table {
-    z-index: 1;
+  .tables {
+    z-index: 10;
   }
   .image {
-    z-index: -1;
+    z-index: 1;
+    width: step(8);
   }
-
+  > .image {
+    margin-top: step(-1);
+  }
   .color {
-    z-index: 0;
     z-index: -1;
-    z-index: -2;
     position: absolute;
     top: 0;
     left: 0;
@@ -41,6 +44,11 @@ footer {
 
 }
 
+header {
+  section {
+    z-index: 5;
+  }
+}
 header,
 footer {
   position: relative;
@@ -50,6 +58,9 @@ footer {
 }
 
 footer {
+  margin-top: step(-1);
+  padding-top: step(1);
+
   .color {
     top: unset;
     bottom: 0;
@@ -62,10 +73,18 @@ footer {
   }
 }
 
+
+
 main {
   section {
+    margin-top: step(-3);
     &.r{
       margin-left: step(1);
+    }
+    &.s1,
+    &.s3,
+    &.s5 {
+      // folgt auf hochformat
     }
     @media only screen and (min-width: 900px) {
       &.s1 {
@@ -73,23 +92,34 @@ main {
         margin-left: step(2);
       }
       &.s2 {
-        padding-left: step(3);
-      }
-      &.s3 {
+        padding-left: step(2);
         padding-right: step(2);
       }
-      &.s5 {
-        width: step(8);
-        margin-left: step(2);
+      &.s3 {
+        padding-left: step(2);
+        padding-right: step(1);
       }
-      &.table {
-        padding-right: step(3);
+      &.s5 {
+        margin-left: step(1);
       }
     }
+  }
+}
+
+section.table-wrapper {
+  margin: 0;
+  padding: 0;
+  width: step(10);
+  margin-top: step(-1);
+  .tables {
+    padding: step(1);
+    position: absolute;
+    top: step(1.5);
+    @media only screen and (min-width: 900px) {
+      padding-right: step(3);
+    }
     @media only screen and (min-width: 1200px) {
-      &.table {
-        padding-right: step(5);
-      }
+      padding-right: step(5);
     }
   }
 }

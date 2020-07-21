@@ -30,9 +30,6 @@
     @-o-keyframes fadein {
       from { opacity: 0; } to { opacity: 1; }
     }
-    figure {
-      display: none !important;
-    }
   </style>
 
 </head>
@@ -57,104 +54,114 @@
     </div>
 
     <section>
-      <div class="layout text" lang="de">
+      <div class="text" lang="de">
         {{{content.text1de}}}
       </div>
     </section>
 
-    <div class="layout color beige"></div>
+    <div class="color beige"></div>
 
   </header>
 
   <main id="main" class="fade-in">
 
-    <section class="s1 r">
-      <div class="layout text white" lang="en">
-        {{{content.text1en}}}
-      </div>
-      <div class="layout color olive para" data-para-speed="0.5"></div>
-    </section>
-
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-1" data-width="7" data-para-speed="1">
+    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-1"
+      data-width="7" data-para-speed="1">
     </figure>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-2" data-width="9" data-para-speed="2">
+    <section class="s1 r">
+      <div class="text white" lang="en">
+        {{{content.text1en}}}
+      </div>
+      <div class="color olive para" data-para-speed="0.5"></div>
+    </section>
+
+    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-2"
+      data-width="9" data-left="1" data-para-speed="2">
     </figure>
 
     <section class="s2">
-      <div class="layout color petrol para" data-para-speed="0.5"></div>
-      <div class="layout text" lang="de">
+      <div class="color petrol para" data-para-speed="0.5"></div>
+      <div class="text" lang="de">
         {{{content.text2de}}}
       </div>
     </section>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-3" data-width="8" data-para-speed="1.5">
+    <figure class="image para" data-imagename="schweizer5-eventlocation-frankfurt-3"
+      data-para-speed="1.5">
     </figure>
 
     <section class="s3 r">
-      <div class="layout color olive para" data-para-speed="0.5"></div>
-      <div class="layout text white" lang="en">
+      <div class="color olive para" data-para-speed="0.5"></div>
+      <div class="text white" lang="en">
         {{{content.text2en}}}
       </div>
     </section>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-4" data-width="8" data-left="2" data-para-speed="2.5">
+    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-4"
+      data-left="2" data-para-speed="2.5">
     </figure>
 
     <section class="s4">
-      <div class="layout color beige para" data-para-speed="1"></div>
-      <div class="layout text" lang="de">
+      <div class="color beige para" data-para-speed="1"></div>
+      <div class="text" lang="de">
         {{{content.text3de}}}
       </div>
     </section>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-5" data-width="8" data-para-speed="1.5">
+    <figure class="image para" data-imagename="schweizer5-eventlocation-frankfurt-5"
+      data-para-speed="1.5">
     </figure>
 
     <section class="s5 r">
-      <div class="layout color petrol para" data-para-speed="0.5"></div>
-      <div class="layout text white" lang="en">
+      <div class="color petrol para" data-para-speed="0.5"></div>
+      <div class="text white" lang="en">
         {{{content.text3en}}}
       </div>
     </section>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-6" data-width="7" data-left="3" data-para-speed="2">
-    </figure>
+    <section class="table-wrapper layout" lang="en">
 
-    <section class="layout table" lang="en">
-      <div>
-        <h3>Features</h3>
-        <ul>
-          <li>Max <i>99</i> people standing</li>
-          <li>Max <i>60-70</i> people seated</li>
-          <li><i>150&nbsp;m²</i></li>
-          <li>3 rooms, (<i>2&nbsp;>&nbsp;30&nbsp;m²</i>), customizable</li>
-          <li>Catering kitchen</li>
-          <li>Flexible catering partner</li>
-          <li>Wi-Fi</li>
-          <li>Outdoor spaces (terrace and garden)</li>
-        </ul>
-      </div>
-      <div>
-        <h3><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>Venue</a></h3>
-        <ul>
-          <li><a target="_blank" class="no-underline" title="Find address on Google Maps" {{{href info.contact.google}}}>Schweizer Strasse&nbsp;5</a></li>
-          <li>Museum district</li>
-          <li>Frankfurt a.M. / Sachsenhausen Nord</li>
-          <li>Subway Station: Gartenstrasse <i>200&nbsp;m</i></li>
-          <li>Public Car Park: Parkhaus Untermainanlage <i>500&nbsp;m</i></li>
-          <li>Main train station: Frankfurt Hbf <i>1000&nbsp;m</i></li>
-          <li><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>See on Map</a></li>
-        </ul>
+      <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-6"
+        data-width="7" data-left="3" data-para-speed="2">
+      </figure>
+
+      <div class="tables">
+        <div class="table">
+          <h3>Features</h3>
+          <ul>
+            <li>Max <i>99</i> people standing</li>
+            <li>Max <i>60-70</i> people seated</li>
+            <li><i>150&nbsp;m²</i></li>
+            <li>3 rooms, (<i>2&nbsp;>&nbsp;30&nbsp;m²</i>), customizable</li>
+            <li>Catering kitchen</li>
+            <li>Flexible catering partner</li>
+            <li>Wi-Fi</li>
+            <li>Outdoor spaces (terrace and garden)</li>
+          </ul>
+        </div>
+        <div class="table">
+          <h3><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>Venue</a></h3>
+          <ul>
+            <li><a target="_blank" class="no-underline" title="Find address on Google Maps" {{{href info.contact.google}}}>Schweizer Strasse&nbsp;5</a></li>
+            <li>Museum district</li>
+            <li>Frankfurt a.M. / Sachsenhausen Nord</li>
+            <li>Subway Station: Gartenstrasse <i>200&nbsp;m</i></li>
+            <li>Public Car Park: Parkhaus Untermainanlage <i>500&nbsp;m</i></li>
+            <li>Main train station: Frankfurt Hbf <i>1000&nbsp;m</i></li>
+            <li><a target="_blank" title="Find address on Google Maps" {{{href info.contact.google}}}>See on Map</a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <figure class="layout image para" data-imagename="schweizer5-eventlocation-frankfurt-7" data-width="8" data-para-speed="1.5">
+    <figure class="image layout para" data-imagename="schweizer5-eventlocation-frankfurt-7"
+      data-top="-1" data-para-speed="1.5">
     </figure>
 
   </main>
 
-  <footer class="fade-in layout" lang="en">
+  <footer class="fade-in" lang="en">
 
     <section>
       <div class="text">
