@@ -1,7 +1,7 @@
 import Paraport from './js/paraport';
 import './styles/design.scss';
 
-const paraport = new Paraport('.para');
+window.paraport = new Paraport({ multiply: 3 });
 
 // Handle image uploads
 const requireAll = (r) => r.keys().forEach(r);
