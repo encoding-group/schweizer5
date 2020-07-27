@@ -7,7 +7,7 @@ class ParaportElement {
     this._speed =
       parseFloat(
         this._element.getAttribute('data-para-speed') || defaultSpeed
-      ) * 0.15;
+      ) * 0.1;
 
     this._centerPoint =
       (window.innerHeight - this._element.getBoundingClientRect().height) * 0.5;
@@ -64,6 +64,9 @@ class Paraport {
     document.body.classList.add('para-initalized');
 
     this.onScroll();
+    setTimeout(() => {
+      this.onScroll();
+    }, 1);
 
     let context = this;
 

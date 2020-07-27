@@ -1,6 +1,5 @@
 footer {
   .contact {
-    @include left(1);
     a {
       text-decoration: none;
       color: inherit;
@@ -11,7 +10,6 @@ footer {
   }
   aside {
     font-size: 0.4rem;
-    padding: 1em;
     ul,
     li,
     a {
