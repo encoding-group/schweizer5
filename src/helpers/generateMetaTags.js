@@ -6,5 +6,15 @@ module.exports = function (meta, info) {
     <meta name="description" content="${meta.description}">
     <meta name="keywords" content="${meta.keywords.join(', ')}">
     <meta name="Generator" content="encoding.group">
+    <meta name="ICBM" content="${info.address.latitude}, ${
+    info.address.longitude
+  }">
+    <meta name="geo.position" content="${info.address.latitude};${
+    info.address.longitude
+  }">
+    <meta name="geo.region" content="${info.address.iso_3166_1}">
+    <meta name="geo.placename" content="${info.address.city}">
+    <link rel="me" href="mailto:${info.contact.email}">
+    <link rel="me" href="sms:${info.contact.mobile.replace(/\s/g, '')}">
     `;
 };

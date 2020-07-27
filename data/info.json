@@ -11,6 +11,7 @@
     "postalCode": "60594",
     "city": "Frankfurt am Main",
     "country": "Germany",
+    "iso_3166_1": "DE",
     "latitude": "50.105010",
     "longitude": "8.678330"
   },
