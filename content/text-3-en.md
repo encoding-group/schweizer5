@@ -1,1 +1,2 @@
-The Schweizer 5 can be rented every day of the week. Concerts, readings, vernissages, workshops, presentations, film- and foto location, dinners, corporate events, birthdays, weddings, Christmas- and family celebrations; the Schweizer 5 offers a spectacular ambience for unforgettable events. Depending on your wishes, you will be supported by our professional team in all areas of creating a successful event.
+The Schweizer 5 can be rented every day of the week. Concerts, readings, workshops, presentations, film- and foto location, dinners: the Schweizer 5 offers a spectacular ambience for unforgettable events.
+Depending on your wishes, you will be supported by our professional team in all areas of creating a successful event.
